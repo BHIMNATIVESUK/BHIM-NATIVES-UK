@@ -3,22 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-<meta name="description" content="BHIM Natives UK — STONEBWOY news, music, achievements, streaming statistics, performances, events and the global BHIM movement.">
-<title>BHIM Natives UK | STONEBWOY</title>
+
+<title>BHIM Natives UK | The STONEBWOY Archive</title>
+
+<meta name="description"
+content="BHIM Natives UK — an independent fan archive celebrating STONEBWOY, his story, music, achievements, tours, performances and global impact.">
 
 <style>
+
+/* =========================================================
+   BHIM NATIVES UK
+   STONEBWOY DIGITAL ARCHIVE
+========================================================= */
+
 :root{
-  --bg:#050505;
-  --panel:#0d0f12;
-  --panel2:#12151a;
-  --line:#252b33;
-  --text:#f5f7fa;
-  --muted:#a7afb9;
-  --green:#20c65a;
-  --green-dark:#0d8f3d;
-  --gold:#f4c95d;
-  --max:1180px;
+  --black:#050505;
+  --black2:#090b0d;
+  --panel:#101317;
+  --panel2:#15191e;
+  --green:#18d766;
+  --green2:#0ea94e;
+  --white:#f7f9fa;
+  --grey:#a8b0b8;
+  --grey2:#737d87;
+  --line:#252b31;
+  --gold:#e9c76b;
+  --max:1200px;
   --radius:20px;
 }
 
@@ -33,11 +43,10 @@ html{
 }
 
 body{
+  background:var(--black);
+  color:var(--white);
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.65;
-  overflow-x:hidden;
+  line-height:1.7;
 }
 
 a{
@@ -45,13 +54,13 @@ a{
   text-decoration:none;
 }
 
-img{
-  max-width:100%;
-  display:block;
+button{
+  font-family:inherit;
 }
 
-button{
-  font:inherit;
+img{
+  width:100%;
+  display:block;
 }
 
 .container{
@@ -59,37 +68,35 @@ button{
   margin:auto;
 }
 
-.green{
-  color:var(--green);
+section{
+  padding:90px 0;
+  border-bottom:1px solid var(--line);
 }
 
-.gold{
-  color:var(--gold);
-}
-
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 header{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(5,5,5,.92);
-  backdrop-filter:blur(15px);
+  z-index:999;
+  background:rgba(5,5,5,.94);
+  backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
 
 nav{
-  min-height:74px;
+  min-height:76px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
 }
 
 .logo{
-  font-size:1.3rem;
-  font-weight:900;
-  letter-spacing:-.5px;
+  font-weight:1000;
+  letter-spacing:-1px;
+  font-size:1.15rem;
 }
 
 .logo span{
@@ -98,14 +105,14 @@ nav{
 
 .navlinks{
   display:flex;
+  gap:19px;
   align-items:center;
-  gap:21px;
 }
 
 .navlinks a{
-  color:#dce1e7;
-  font-size:.9rem;
-  font-weight:800;
+  font-size:.78rem;
+  font-weight:900;
+  color:#d9dee3;
   transition:.2s;
 }
 
@@ -115,82 +122,92 @@ nav{
 
 .menu{
   display:none;
-  background:#101318;
-  border:1px solid var(--line);
+  background:#11151a;
   color:#fff;
+  border:1px solid var(--line);
   border-radius:10px;
   padding:8px 12px;
-  cursor:pointer;
+  font-size:1.1rem;
 }
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-  min-height:680px;
-  display:grid;
-  place-items:center;
+  min-height:760px;
+  display:flex;
+  align-items:center;
   position:relative;
   overflow:hidden;
-  border-bottom:1px solid var(--line);
   background:
-    radial-gradient(circle at 20% 25%,rgba(32,198,90,.18),transparent 28%),
-    radial-gradient(circle at 80% 40%,rgba(255,255,255,.05),transparent 25%),
-    #070707;
+    radial-gradient(circle at 15% 20%,rgba(24,215,103,.18),transparent 30%),
+    radial-gradient(circle at 85% 60%,rgba(255,255,255,.06),transparent 30%),
+    linear-gradient(135deg,#050505,#0b0d0f);
+}
+
+.hero:after{
+  content:"BHIM";
+  position:absolute;
+  right:-80px;
+  bottom:-100px;
+  font-size:22rem;
+  font-weight:1000;
+  color:rgba(255,255,255,.018);
+  pointer-events:none;
 }
 
 .hero-content{
   position:relative;
-  padding:100px 0;
-  text-align:center;
+  z-index:2;
+  max-width:950px;
 }
 
-.kicker{
-  display:inline-block;
-  border:1px solid #284032;
-  background:#0b140e;
-  color:#dff2e5;
+.badge{
+  display:inline-flex;
   padding:8px 15px;
   border-radius:999px;
-  font-size:.8rem;
+  border:1px solid #235236;
+  background:#0b160f;
+  color:#d9f7e3;
+  font-size:.75rem;
   font-weight:900;
-  letter-spacing:.5px;
+  letter-spacing:1px;
 }
 
 .hero h1{
-  font-size:clamp(3.5rem,10vw,7.5rem);
-  line-height:.88;
+  font-size:clamp(4rem,11vw,9rem);
+  line-height:.84;
+  letter-spacing:-7px;
   margin:25px 0;
-  letter-spacing:-5px;
 }
 
 .hero h1 span{
   color:var(--green);
 }
 
-.hero p{
-  max-width:760px;
-  margin:auto;
-  color:#c5ccd4;
-  font-size:1.08rem;
+.hero-description{
+  max-width:780px;
+  color:#c5ccd2;
+  font-size:1.12rem;
 }
 
-.hero-actions{
+.buttons{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
   gap:12px;
   margin-top:30px;
 }
 
 .btn{
+  min-height:48px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:48px;
   padding:0 20px;
   border-radius:12px;
-  border:1px solid var(--line);
   font-weight:900;
+  border:1px solid var(--line);
   transition:.2s;
 }
 
@@ -198,261 +215,309 @@ nav{
   transform:translateY(-2px);
 }
 
-.btn.primary{
+.btn.green{
   background:var(--green);
-  color:#031008;
+  color:#041009;
   border-color:var(--green);
 }
 
-.btn.secondary{
+.btn.dark{
   background:#11151a;
 }
 
-/* SECTIONS */
-
-section{
-  padding:85px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.section-head{
-  margin-bottom:34px;
-}
+/* =========================================================
+   HEADINGS
+========================================================= */
 
 .eyebrow{
   color:var(--green);
-  font-size:.75rem;
-  font-weight:900;
+  font-size:.72rem;
+  font-weight:1000;
   letter-spacing:2px;
   text-transform:uppercase;
   margin-bottom:9px;
 }
 
 h2{
-  font-size:clamp(2rem,5vw,3.5rem);
-  line-height:1.05;
-  letter-spacing:-1.5px;
+  font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1;
+  letter-spacing:-2px;
 }
 
-.section-head p{
-  max-width:760px;
-  color:var(--muted);
-  margin-top:14px;
+.section-intro{
+  max-width:800px;
+  color:var(--grey);
+  margin-top:15px;
 }
+
+/* =========================================================
+   CARDS
+========================================================= */
 
 .grid{
   display:grid;
   gap:18px;
 }
 
-.grid-2{
-  grid-template-columns:repeat(2,minmax(0,1fr));
+.grid2{
+  grid-template-columns:repeat(2,1fr);
 }
 
-.grid-3{
-  grid-template-columns:repeat(3,minmax(0,1fr));
+.grid3{
+  grid-template-columns:repeat(3,1fr);
 }
 
-.grid-4{
-  grid-template-columns:repeat(4,minmax(0,1fr));
+.grid4{
+  grid-template-columns:repeat(4,1fr);
 }
 
 .card{
   background:linear-gradient(145deg,var(--panel2),var(--panel));
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:25px;
-  box-shadow:0 12px 40px rgba(0,0,0,.2);
+  padding:26px;
   transition:.2s;
 }
 
 .card:hover{
-  border-color:#3b4652;
-  transform:translateY(-2px);
+  transform:translateY(-3px);
+  border-color:#3b454e;
 }
 
 .card h3{
-  font-size:1.2rem;
-  margin-bottom:9px;
+  font-size:1.3rem;
+  margin-bottom:8px;
 }
 
 .card p{
-  color:var(--muted);
-  font-size:.95rem;
+  color:var(--grey);
 }
 
-.icon{
-  font-size:1.8rem;
-  margin-bottom:14px;
-}
+/* =========================================================
+   FEATURED STORY
+========================================================= */
 
-/* STORY */
-
-.story{
+.story-layout{
   display:grid;
   grid-template-columns:1.1fr .9fr;
-  gap:28px;
-  align-items:stretch;
+  gap:25px;
+  margin-top:35px;
 }
 
-.story-copy p{
-  color:#c4cbd3;
-  margin-bottom:17px;
-}
-
-.story-quote{
-  border-left:3px solid var(--green);
-  padding:18px 0 18px 20px;
-  color:#fff;
-  font-size:1.12rem;
-  font-weight:900;
-}
-
-.story-photo img{
-  width:100%;
-  height:100%;
-  min-height:480px;
-  object-fit:cover;
+.story-image{
+  overflow:hidden;
   border-radius:var(--radius);
   border:1px solid var(--line);
 }
 
-/* NEWS */
-
-.news-card{
-  cursor:pointer;
-}
-
-.news-card .news-label{
-  color:var(--green);
-  font-size:.75rem;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-bottom:9px;
-}
-
-.news-card h3{
-  font-size:1.35rem;
-}
-
-/* MUSIC */
-
-.music-card img{
-  width:100%;
-  height:260px;
+.story-image img{
+  height:100%;
+  min-height:500px;
   object-fit:cover;
-  border-radius:15px;
-  margin-bottom:18px;
 }
 
-.tag{
-  display:inline-block;
-  background:var(--green);
-  color:#06100a;
-  font-size:.7rem;
+.story-text p{
+  margin-bottom:18px;
+  color:#c4cbd1;
+}
+
+.quote{
+  border-left:3px solid var(--green);
+  padding:18px 20px;
+  margin-top:20px;
   font-weight:900;
-  padding:4px 9px;
-  border-radius:999px;
+  font-size:1.1rem;
+}
+
+/* =========================================================
+   ARTICLE SYSTEM
+========================================================= */
+
+.article-card{
+  position:relative;
+}
+
+.article-label{
+  color:var(--green);
+  font-size:.7rem;
+  font-weight:1000;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
   margin-bottom:10px;
 }
 
-/* STATS */
+.article-card h3{
+  font-size:1.4rem;
+}
+
+.article-preview{
+  color:var(--grey);
+  margin-top:8px;
+}
+
+.read-more{
+  margin-top:18px;
+  background:none;
+  border:0;
+  color:var(--green);
+  font-weight:1000;
+  cursor:pointer;
+  padding:0;
+}
+
+.article-body{
+  display:none;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  color:#c5ccd2;
+}
+
+.article-body.open{
+  display:block;
+}
+
+.article-body p{
+  margin-bottom:15px;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+  position:relative;
+  margin-top:35px;
+}
+
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:15px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#26332b;
+}
+
+.timeline-item{
+  position:relative;
+  padding:0 0 40px 52px;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:7px;
+  top:6px;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 0 5px #0c170f;
+}
+
+.timeline-year{
+  color:var(--gold);
+  font-size:.75rem;
+  font-weight:1000;
+  letter-spacing:1px;
+}
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+.album-card{
+  overflow:hidden;
+  padding:0;
+}
+
+.album-cover{
+  height:300px;
+  object-fit:cover;
+}
+
+.album-content{
+  padding:24px;
+}
+
+.album-year{
+  color:var(--green);
+  font-size:.75rem;
+  font-weight:1000;
+}
+
+.album-content h3{
+  font-size:1.5rem;
+  margin:5px 0;
+}
+
+.album-content p{
+  color:var(--grey);
+  font-size:.92rem;
+}
+
+.music-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.music-button{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  font-size:.75rem;
+  font-weight:900;
+  background:#0b0e11;
+}
+
+.music-button:hover{
+  border-color:var(--green);
+  color:var(--green);
+}
+
+/* =========================================================
+   STATS
+========================================================= */
 
 .stat{
-  padding:30px 20px;
   text-align:center;
-  background:#0b0d10;
+  padding:30px 15px;
+  background:#0c0f12;
   border:1px solid var(--line);
   border-radius:18px;
 }
 
 .stat strong{
   display:block;
-  font-size:2.2rem;
-  line-height:1;
+  font-size:2.4rem;
 }
 
 .stat span{
-  display:block;
-  color:var(--muted);
-  margin-top:10px;
-  font-size:.85rem;
+  color:var(--grey);
+  font-size:.82rem;
 }
 
-/* AWARDS */
+/* =========================================================
+   AWARDS
+========================================================= */
+
+.award{
+  border-top:2px solid var(--green);
+}
 
 .award-year{
   color:var(--gold);
+  font-weight:1000;
   font-size:.78rem;
-  font-weight:900;
-  letter-spacing:1px;
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
-.readmore{
-  border:0;
-  background:none;
-  color:var(--green);
-  font-weight:900;
-  cursor:pointer;
-  margin-top:15px;
-}
-
-.more{
-  display:none;
-  margin-top:15px;
-  padding-top:15px;
-  border-top:1px solid var(--line);
-  color:#bec6cf;
-  font-size:.92rem;
-}
-
-.more.open{
-  display:block;
-}
-
-/* TIMELINE */
-
-.timeline{
-  position:relative;
-}
-
-.timeline:before{
-  content:"";
-  position:absolute;
-  left:13px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#26312a;
-}
-
-.timeline-item{
-  position:relative;
-  padding:0 0 32px 45px;
-}
-
-.timeline-dot{
-  position:absolute;
-  left:5px;
-  top:5px;
-  width:18px;
-  height:18px;
-  border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 0 5px #0d1710;
-}
-
-.timeline-item h3{
-  margin-bottom:6px;
-}
-
-.timeline-item p{
-  color:var(--muted);
-}
-
-/* EVENTS */
+/* =========================================================
+   TOUR / EVENTS
+========================================================= */
 
 .event{
   display:flex;
@@ -465,126 +530,136 @@ h2{
   border-bottom:0;
 }
 
-.date{
+.event-date{
   min-width:75px;
   height:max-content;
   text-align:center;
-  background:#090b0e;
+  background:#090c0f;
   border:1px solid var(--line);
   border-radius:12px;
-  padding:9px;
+  padding:10px;
 }
 
-.date strong{
+.event-date strong{
   display:block;
   color:var(--green);
-  font-size:1.1rem;
 }
 
-.date span{
-  color:#818b96;
-  font-size:.7rem;
+.event-date small{
+  color:var(--grey2);
 }
 
-/* GALLERY */
+/* =========================================================
+   VIDEO
+========================================================= */
 
-.gallery-feature img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
-  border-radius:var(--radius);
+.video{
+  overflow:hidden;
+  border-radius:18px;
   border:1px solid var(--line);
+  background:#090b0e;
 }
 
-.gallery-grid{
+.video iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  display:block;
+}
+
+.video-info{
+  padding:18px;
+}
+
+.video-info p{
+  color:var(--grey);
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:16px;
+  gap:15px;
+  margin-top:30px;
 }
 
-.gallery-grid img{
-  width:100%;
-  height:250px;
+.gallery img{
+  height:280px;
   object-fit:cover;
   border-radius:16px;
   border:1px solid var(--line);
-  transition:.25s;
-}
-
-.gallery-grid img:hover{
-  transform:scale(1.015);
-}
-
-/* VIDEOS */
-
-.video-box{
-  aspect-ratio:16/9;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:#080a0c;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:30px;
-  color:var(--muted);
-}
-
-.video-box strong{
-  display:block;
-  color:#fff;
-  font-size:1.2rem;
-  margin-bottom:8px;
-}
-
-/* SOCIALS */
-
-.social-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-
-.social{
-  padding:22px;
-  border-radius:18px;
-  border:1px solid var(--line);
-  background:#0c0f12;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  font-weight:900;
   transition:.2s;
 }
 
-.social:hover{
-  transform:translateY(-3px);
-  border-color:#53606c;
+.gallery img:hover{
+  transform:scale(1.02);
+}
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.social{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px;
+  border:1px solid var(--line);
+  background:#0c0f12;
+  border-radius:16px;
+  font-weight:1000;
 }
 
 .social small{
   display:block;
-  color:var(--muted);
-  margin-top:4px;
-  font-weight:600;
+  color:var(--grey);
+  font-weight:500;
+  margin-top:3px;
 }
 
-/* FOOTER */
+.social:hover{
+  border-color:var(--green);
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box{
+  margin:30px 0;
+}
+
+.search-box input{
+  width:100%;
+  background:#0c0f12;
+  border:1px solid var(--line);
+  border-radius:14px;
+  color:white;
+  padding:16px 18px;
+  outline:none;
+  font-size:1rem;
+}
+
+.search-box input:focus{
+  border-color:var(--green);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-  padding:55px 0;
+  padding:60px 0;
   background:#030303;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:1.4fr .8fr .8fr;
-  gap:30px;
-}
-
-footer p{
-  color:var(--muted);
-  margin-top:10px;
+  grid-template-columns:1.5fr .8fr .8fr;
+  gap:35px;
 }
 
 .footer-links{
@@ -595,20 +670,28 @@ footer p{
 }
 
 .footer-links a{
-  color:#cbd1d8;
+  color:#c5ccd2;
+}
+
+.footer-description{
+  color:var(--grey);
+  max-width:500px;
+  margin-top:12px;
 }
 
 .copyright{
+  border-top:1px solid var(--line);
   margin-top:35px;
   padding-top:20px;
-  border-top:1px solid var(--line);
-  color:#707985;
-  font-size:.8rem;
+  color:#69737d;
+  font-size:.78rem;
 }
 
-/* MOBILE */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
   .navlinks{
     display:none;
@@ -616,7 +699,7 @@ footer p{
     left:4%;
     right:4%;
     top:70px;
-    background:#0a0c0f;
+    background:#090c0f;
     border:1px solid var(--line);
     border-radius:16px;
     padding:15px;
@@ -629,84 +712,72 @@ footer p{
   }
 
   .navlinks a{
-    padding:10px;
+    padding:9px;
   }
 
   .menu{
     display:block;
   }
 
-  .story{
-    grid-template-columns:1fr;
+  .grid3,
+  .grid4{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .grid-3,
-  .grid-4,
-  .social-grid{
-    grid-template-columns:repeat(2,1fr);
+  .story-layout{
+    grid-template-columns:1fr;
   }
 
   .footer-grid{
     grid-template-columns:1fr;
   }
+
 }
 
-@media(max-width:560px){
-
-  .container{
-    width:min(94%,var(--max));
-  }
+@media(max-width:600px){
 
   section{
     padding:65px 0;
   }
 
   .hero{
-    min-height:590px;
+    min-height:650px;
   }
 
   .hero h1{
-    letter-spacing:-3px;
+    font-size:4.4rem;
+    letter-spacing:-4px;
   }
 
-  .hero p{
-    font-size:1rem;
-  }
-
-  .grid-2,
-  .grid-3,
-  .grid-4,
-  .social-grid{
+  .grid2,
+  .grid3,
+  .grid4{
     grid-template-columns:1fr;
   }
 
-  .gallery-grid{
+  .gallery{
     grid-template-columns:1fr 1fr;
   }
 
-  .gallery-grid img{
+  .gallery img{
     height:190px;
   }
 
-  .gallery-feature img{
-    height:390px;
-  }
-
-  .story-photo img{
-    min-height:350px;
-  }
-
-  .event{
-    align-items:flex-start;
-  }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
 <header>
+
 <div class="container">
+
 <nav>
 
 <a href="#home" class="logo">
@@ -716,55 +787,70 @@ BHIM <span>NATIVES UK</span>
 <button class="menu" onclick="toggleMenu()">☰</button>
 
 <div class="navlinks" id="navlinks">
-<a href="#story">Story</a>
-<a href="#news">News</a>
-<a href="#music">Music</a>
-<a href="#stats">Stats</a>
-<a href="#awards">Awards</a>
-<a href="#impact">Impact</a>
-<a href="#events">Events</a>
-<a href="#gallery">Photos</a>
-<a href="#videos">Videos</a>
-<a href="#socials">Socials</a>
+
+<a href="#story">STORY</a>
+<a href="#articles">ARTICLES</a>
+<a href="#music">MUSIC</a>
+<a href="#awards">AWARDS</a>
+<a href="#impact">IMPACT</a>
+<a href="#tours">TOURS</a>
+<a href="#watch">WATCH</a>
+<a href="#gallery">PHOTOS</a>
+<a href="#socials">SOCIALS</a>
+
 </div>
 
 </nav>
+
 </div>
+
 </header>
 
 
-<main>
-
-<!-- HERO -->
+<!-- ======================================================
+     HERO
+====================================================== -->
 
 <section class="hero" id="home">
 
-<div class="container hero-content">
+<div class="container">
 
-<span class="kicker">
-🇬🇭 GHANA × 🇬🇧 UK • BHIM MOVEMENT
+<div class="hero-content">
+
+<span class="badge">
+🇬🇭 GHANA × 🇬🇧 UK • BHIM NATION
 </span>
 
 <h1>
-BHIM<br>
-<span>NATIVES UK</span>
+THE<br>
+<span>STONEBWOY</span><br>
+ARCHIVE
 </h1>
 
-<p>
-A fan-powered UK hub celebrating STONEBWOY —
-his story, music, achievements, performances,
-global impact and the people moving with BHIM.
+<p class="hero-description">
+
+Welcome to BHIM Natives UK — an independent fan
+archive created to document STONEBWOY's story,
+music, achievements, tours, performances,
+global impact and the worldwide BHIM Nation.
+
 </p>
 
-<div class="hero-actions">
+<div class="buttons">
 
-<a class="btn primary" href="#story">
-EXPLORE THE STORY
+<a href="#story" class="btn green">
+EXPLORE HIS STORY
 </a>
 
-<a class="btn secondary" href="#socials">
-FOLLOW BHIM NATIVES UK
+<a href="#music" class="btn dark">
+LISTEN TO THE MUSIC
 </a>
+
+<a href="#watch" class="btn dark">
+WATCH
+</a>
+
+</div>
 
 </div>
 
@@ -773,76 +859,112 @@ FOLLOW BHIM NATIVES UK
 </section>
 
 
-<!-- STORY -->
+<!-- ======================================================
+     SEARCH
+====================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="eyebrow">
+EXPLORE THE ARCHIVE
+</div>
+
+<h2>
+What do you want to discover?
+</h2>
+
+<div class="search-box">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Search Stonebwoy, BET, accident, albums, Wembley, BHIM Fest..."
+onkeyup="searchArchive()">
+
+</div>
+
+<div id="searchResults"></div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     STORY
+====================================================== -->
 
 <section id="story">
 
 <div class="container">
-
-<div class="section-head">
 
 <div class="eyebrow">
 THE JOURNEY
 </div>
 
 <h2>
-The STONEBWOY story
+The STONEBWOY Story
 </h2>
 
-<p>
-From Ghana to stages around the world,
-this is a look at the journey behind the name.
+<p class="section-intro">
+
+From Ashaiman to international stages, this is
+the story of Livingstone Etse Satekla — the artist
+the world knows as STONEBWOY.
+
 </p>
+
+
+<div class="story-layout">
+
+<div class="card story-text">
+
+<p>
+Livingstone Etse Satekla, professionally known as
+STONEBWOY, is a Ghanaian singer, songwriter and
+record producer associated with reggae, dancehall,
+Afrobeats and Afropop.
+</p>
+
+<p>
+His musical journey developed in Ashaiman, Ghana,
+and his early breakthrough came through songs
+including "Climax" and "Ghetto Love" in 2012.
+</p>
+
+<p>
+His career continued through albums including
+<strong>Grade 1</strong>, <strong>Necessary Evil</strong>,
+<strong>Epistles of Mama</strong>, <strong>Anloga Junction</strong>,
+<strong>5th Dimension</strong>, <strong>UP & RUNNIN6</strong>,
+<strong>THE TORCHER</strong> and <strong>TORCHER II</strong>.
+</p>
+
+<p>
+International recognition followed, including a BET
+Award in 2015 and Billboard chart history through
+<strong>Epistles of Mama</strong>.
+</p>
+
+<p>
+But the story is bigger than awards. It is a story
+of resilience, identity, Ghanaian culture, music,
+family, ambition and a global community known as
+<strong>BHIM Nation</strong>.
+</p>
+
+<div class="quote">
+ONE NATION. ONE FAMILY. BHIM! 🇬🇭🇬🇧💚
+</div>
 
 </div>
 
 
-<div class="story">
+<div class="story-image">
 
-<div class="card story-copy">
-
-<p>
-STONEBWOY, born Livingstone Etse Satekla,
-is a Ghanaian artist whose sound connects
-reggae, dancehall, Afrobeats and African influences.
-</p>
-
-<p>
-His rise became especially visible during the
-2010s, when major Ghanaian recognition was followed
-by international attention.
-</p>
-
-<p>
-In 2015, STONEBWOY won the BET Award for
-Best International Act: Africa, becoming one of
-the major Ghanaian artists to receive international
-recognition at the ceremony.
-</p>
-
-<p>
-Since then, his story has continued through albums,
-singles, international collaborations, tours,
-festivals and major performances.
-</p>
-
-<p>
-The BHIM movement has grown alongside the music,
-creating a worldwide community connected through
-culture, sound and identity.
-</p>
-
-<div class="story-quote">
-ONE MOVEMENT. ONE FAMILY. BHIM! 🇬🇭🇬🇧💚
-</div>
-
-</div>
-
-
-<div class="story-photo">
-
-<img src="IMG_4974.jpeg"
-alt="STONEBWOY">
+<img src="IMG_4974.jpeg" alt="STONEBWOY">
 
 </div>
 
@@ -853,84 +975,394 @@ alt="STONEBWOY">
 </section>
 
 
-<!-- NEWS -->
+<!-- ======================================================
+     ARTICLES
+====================================================== -->
 
-<section id="news">
+<section id="articles">
 
 <div class="container">
 
-<div class="section-head">
-
 <div class="eyebrow">
-BHIM NATIVES UK
+READ
 </div>
 
 <h2>
-News & Updates
+Stories Behind The Artist
 </h2>
 
-<p>
-Our own space for music news, milestones,
-performances and BHIM movement updates.
+<p class="section-intro">
+
+Every "Read More" opens a longer article so visitors
+can actually learn something about STONEBWOY instead
+of being sent away from BHIM Natives UK.
+
 </p>
 
-</div>
+
+<div class="grid grid2" style="margin-top:35px;">
 
 
-<div class="grid grid-3">
+<!-- CHILDHOOD -->
 
-<a class="card news-card" href="#music">
+<article class="card article-card">
 
-<div class="news-label">
-MUSIC
-</div>
-
-<h3>
-New music & releases
-</h3>
-
-<p>
-Follow new releases, albums, collaborations,
-visuals and important moments from the music.
-</p>
-
-</a>
-
-
-<a class="card news-card" href="#stats">
-
-<div class="news-label">
-STREAMING
+<div class="article-label">
+CHAPTER 01 • CHILDHOOD
 </div>
 
 <h3>
-Streaming milestones
+Growing Up In Ashaiman
 </h3>
 
-<p>
-Track Spotify, YouTube and other platform
-statistics as the numbers continue to grow.
+<p class="article-preview">
+The environment that became part of the foundation
+of STONEBWOY's identity.
 </p>
 
-</a>
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
+<p>
+Before international stages, awards and albums,
+there was Livingstone Etse Satekla and the environment
+that helped shape his outlook. STONEBWOY is closely
+associated with Ashaiman in Ghana, a place that has
+remained important to the identity surrounding his
+music and public story.
+</p>
+
+<p>
+Growing up in Ghana exposed him to different sounds,
+languages, cultures and everyday experiences that
+would later become important ingredients in his
+artistry. His music would eventually move between
+dancehall, reggae, Afrobeats and other African sounds,
+while retaining a strong Ghanaian identity.
+</p>
+
+<p>
+The early years matter because they provide context
+for the artist audiences see today. The international
+performer was not created overnight. His identity
+developed through experiences, influences and an
+increasing desire to express himself through music.
+</p>
+
+<p>
+STONEBWOY's story is therefore not simply a story
+about becoming famous. It is a story about developing
+a voice and carrying that voice from a Ghanaian
+community to audiences around the world.
+</p>
+
+</div>
+
+</article>
 
 
-<a class="card news-card" href="#events">
+<!-- EARLY MUSIC -->
 
-<div class="news-label">
-LIVE
+<article class="card article-card">
+
+<div class="article-label">
+CHAPTER 02 • BEGINNINGS
 </div>
 
 <h3>
-Shows & performances
+How The Music Started
 </h3>
 
-<p>
-Follow major stages, concerts, festivals,
-tours and unforgettable BHIM moments.
+<p class="article-preview">
+From early songwriting and performances to the first
+major breakthrough.
 </p>
 
-</a>
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
+<p>
+STONEBWOY's relationship with music developed long
+before international recognition. His story includes
+early songwriting and performance experiences before
+he began establishing himself professionally.
+</p>
+
+<p>
+Apple Music identifies 2012 as a major early
+breakthrough, with "Climax" and "Ghetto Love"
+helping introduce his name to a wider audience.
+Both songs were nominated for Ghana Music Awards.
+</p>
+
+<p>
+That period represented the beginning of a career
+that would eventually stretch across multiple albums,
+international collaborations and performances around
+the world.
+</p>
+
+<p>
+The early chapter is important because it shows how
+the foundations of the artist were already present
+before the international spotlight arrived. What
+started as a Ghanaian music career would gradually
+become an international African music story.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- ACCIDENT -->
+
+<article class="card article-card">
+
+<div class="article-label">
+CHAPTER 03 • RESILIENCE
+</div>
+
+<h3>
+The Accident That Changed His Life
+</h3>
+
+<p class="article-preview">
+A difficult chapter that became part of the story
+of STONEBWOY's resilience.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
+<p>
+One of the most difficult chapters in STONEBWOY's
+life came when he was involved in a serious road
+accident during his youth. The experience became
+part of the personal story he has discussed publicly
+over the years.
+</p>
+
+<p>
+The accident affected his physical wellbeing and
+created challenges that extended beyond the immediate
+injuries. His recovery and the support of his family
+became important parts of his journey.
+</p>
+
+<p>
+For an artist whose career would later depend heavily
+on performance, movement and stage presence, dealing
+with physical limitations created another obstacle
+to overcome.
+</p>
+
+<p>
+Rather than becoming the end of his ambitions, the
+experience became part of a larger story of resilience.
+The road from injury to international performer
+required patience, determination and continued belief
+in his future.
+</p>
+
+<p>
+This chapter is important because it adds another
+dimension to the STONEBWOY story. Behind the artist
+known for energetic performances is a person who has
+experienced difficult moments and continued moving
+forward.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- WHY MUSIC -->
+
+<article class="card article-card">
+
+<div class="article-label">
+CHAPTER 04 • PURPOSE
+</div>
+
+<h3>
+Why STONEBWOY Makes Music
+</h3>
+
+<p class="article-preview">
+Music as identity, expression, culture and connection.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
+<p>
+For STONEBWOY, music has become much more than a
+career. His work brings together African identity,
+dancehall culture, reggae, Afrobeats and personal
+experiences.
+</p>
+
+<p>
+His catalogue regularly moves between messages of
+resilience, love, ambition, spirituality, celebration
+and social awareness. This allows different audiences
+to find different meanings in the same body of work.
+</p>
+
+<p>
+His international journey has also given him an
+opportunity to represent Ghana and African music
+outside the continent. Collaborations with artists
+from different countries have helped place his sound
+inside a much wider musical conversation.
+</p>
+
+<p>
+At the centre is communication. Music allows
+STONEBWOY to speak to people who may live thousands
+of miles away but recognise something in the emotions,
+rhythms and stories contained in the songs.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- BHIM NATION -->
+
+<article class="card article-card">
+
+<div class="article-label">
+CHAPTER 05 • COMMUNITY
+</div>
+
+<h3>
+The Rise Of BHIM Nation
+</h3>
+
+<p class="article-preview">
+How an artist's fan identity became part of his
+international story.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
+<p>
+BHIM Nation is an important part of the STONEBWOY
+story. It represents the community of supporters
+connected with his music, identity and journey.
+</p>
+
+<p>
+The name has grown alongside the artist's career,
+appearing across concerts, festivals, fan communities
+and international events.
+</p>
+
+<p>
+BHIM Nation also reflects the relationship between
+an African artist and a worldwide audience. Fans can
+be thousands of miles away from Ghana while still
+feeling connected to the culture and music.
+</p>
+
+<p>
+BHIM Festival has become one of the major events
+associated with this community, giving fans an
+opportunity to experience the music collectively.
+</p>
+
+<p>
+For BHIM Natives UK, documenting this community is
+part of the purpose of the website: celebrating the
+people, music and moments that make the BHIM Nation
+story bigger than a single stage.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- GLOBAL -->
+
+<article class="card article-card">
+
+<div class="article-label">
+CHAPTER 06 • GLOBAL
+</div>
+
+<h3>
+From Ghana To The World
+</h3>
+
+<p class="article-preview">
+How the music moved from Ashaiman to international
+audiences.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
+<p>
+STONEBWOY's international journey has been built
+through music, collaborations, awards, touring and
+consistent engagement with audiences outside Ghana.
+</p>
+
+<p>
+Apple Music notes major international milestones
+including the 2015 BET Award for Best International
+Act and the Billboard chart appearance of
+<em>Epistles of Mama</em>.
+</p>
+
+<p>
+His collaborations have also connected him with
+artists from Africa, the Caribbean, Europe and the
+United States. This reflects the broad musical
+language of his Afro-dancehall style.
+</p>
+
+<p>
+International touring has become another important
+part of the story. Performing in different countries
+allows the music to move from streaming platforms
+into real-world communities.
+</p>
+
+<p>
+The global story is ultimately about connection:
+Ghanaian roots remaining visible while the music
+continues travelling across borders.
+</p>
+
+</div>
+
+</article>
+
 
 </div>
 
@@ -939,93 +1371,336 @@ tours and unforgettable BHIM moments.
 </section>
 
 
-<!-- MUSIC -->
+<!-- ======================================================
+     MUSIC
+====================================================== -->
 
 <section id="music">
 
 <div class="container">
 
-<div class="section-head">
-
 <div class="eyebrow">
-DISCOGRAPHY
+LISTEN
 </div>
 
 <h2>
-Music
+The Music Archive
 </h2>
 
-<p>
-A BHIM Natives UK music corner covering albums,
-songs, eras and milestones without sending
-visitors away from our website.
+<p class="section-intro">
+Explore the albums directly from BHIM Natives UK.
+Each project includes listening links.
 </p>
+
+
+<div class="grid grid3" style="margin-top:35px;">
+
+
+<!-- TORCHER II -->
+
+<article class="card album-card">
+
+<img class="album-cover"
+src="IMG_6443.jpeg"
+alt="TORCHER II">
+
+<div class="album-content">
+
+<div class="album-year">
+2026 • ALBUM
+</div>
+
+<h3>
+TORCHER II
+</h3>
+
+<p>
+The 2026 sequel continues the TORCHER chapter
+with a focus on hunger, resilience and African
+dancehall.
+</p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://music.apple.com/us/album/torcher-ii/1890553119"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+<a class="music-button"
+href="https://open.spotify.com/artist/2ayt5jDUuTCpoTG7sHSvuq/"
+target="_blank">
+● SPOTIFY
+</a>
 
 </div>
 
+</div>
 
-<div class="grid grid-3">
+</article>
 
 
-<article class="card music-card">
+<!-- TORCHER -->
 
-<img src="IMG_4606.jpeg"
-alt="STONEBWOY music feature">
+<article class="card album-card">
 
-<span class="tag">
-5TH DIMENSION
-</span>
+<img class="album-cover"
+src="IMG_4974.jpeg"
+alt="THE TORCHER">
+
+<div class="album-content">
+
+<div class="album-year">
+2025 • ALBUM
+</div>
+
+<h3>
+THE TORCHER
+</h3>
+
+<p>
+A focused project in STONEBWOY's modern African
+dancehall catalogue.
+</p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://open.spotify.com/album/0qkEheVRbwNHB4KIGDOpLT"
+target="_blank">
+● SPOTIFY
+</a>
+
+<a class="music-button"
+href="https://music.apple.com/us/artist/stonebwoy/572206113"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- UP RUNNIN6 -->
+
+<article class="card album-card">
+
+<img class="album-cover"
+src="IMG_4606.jpeg"
+alt="UP & RUNNIN6">
+
+<div class="album-content">
+
+<div class="album-year">
+2024 • ALBUM
+</div>
+
+<h3>
+UP & RUNNIN6
+</h3>
+
+<p>
+A 13-track project featuring collaborations
+including Wyclef Jean, Spice and ODUMODUBLVCK.
+</p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://open.spotify.com/album/5EomOd5HdWMyenGsSv61D2"
+target="_blank">
+● SPOTIFY
+</a>
+
+<a class="music-button"
+href="https://music.apple.com/us/artist/stonebwoy/572206113"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 5TH -->
+
+<article class="card album-card">
+
+<img class="album-cover"
+src="IMG_5019.jpeg"
+alt="5th Dimension">
+
+<div class="album-content">
+
+<div class="album-year">
+2023 • 17 TRACKS
+</div>
 
 <h3>
 5th Dimension
 </h3>
 
 <p>
-A major album era that expanded the sound
-and international reach of the BHIM movement.
+A 17-track project blending Afro-dancehall with
+Afrobeats, reggae, amapiano and other influences.
 </p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://open.spotify.com/album/1stg00x6atjTH6w2MN4KZb"
+target="_blank">
+● SPOTIFY
+</a>
+
+<a class="music-button"
+href="https://music.apple.com/us/album/5th-dimension/1849834995"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+</div>
+
+</div>
 
 </article>
 
 
-<article class="card music-card">
+<!-- ANLOGA -->
 
-<img src="IMG_4700.jpeg"
-alt="STONEBWOY performance">
+<article class="card album-card">
 
-<span class="tag">
-THE TORCHER
-</span>
+<img class="album-cover"
+src="IMG_4659.jpeg"
+alt="Anloga Junction">
+
+<div class="album-content">
+
+<div class="album-year">
+2020 • 15 TRACKS
+</div>
 
 <h3>
-The Torcher
+Anloga Junction
 </h3>
 
 <p>
-A later chapter in the catalogue that gives
-fans another era to explore and document.
+A 15-track album featuring collaborations with
+artists including Keri Hilson, Kojo Antwi and Nasty C.
 </p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://open.spotify.com/album/6762YuPXlkO5xp4Ifo7rGt"
+target="_blank">
+● SPOTIFY
+</a>
+
+<a class="music-button"
+href="https://music.apple.com/us/album/anloga-junction/1852951848"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+</div>
+
+</div>
 
 </article>
 
 
-<article class="card music-card">
+<!-- EOM -->
 
-<img src="IMG_4659.jpeg"
-alt="STONEBWOY">
+<article class="card album-card">
 
-<span class="tag">
-BHIM CLASSICS
-</span>
+<img class="album-cover"
+src="IMG_4700.jpeg"
+alt="Epistles of Mama">
+
+<div class="album-content">
+
+<div class="album-year">
+2018 • ALBUM
+</div>
 
 <h3>
-The catalogue
+Epistles of Mama
 </h3>
 
 <p>
-Explore songs, collaborations and fan favourites
-from different stages of the career.
+A major project in the catalogue and the album
+that became part of STONEBWOY's Billboard history.
 </p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://open.spotify.com/artist/2ayt5jDUuTCpoTG7sHSvuq/"
+target="_blank">
+● SPOTIFY
+</a>
+
+<a class="music-button"
+href="https://music.apple.com/us/artist/stonebwoy/572206113"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- NECESSARY EVIL -->
+
+<article class="card album-card">
+
+<img class="album-cover"
+src="IMG_6443.jpeg"
+alt="Necessary Evil">
+
+<div class="album-content">
+
+<div class="album-year">
+2014 • ALBUM
+</div>
+
+<h3>
+Necessary Evil
+</h3>
+
+<p>
+An early studio project from the developing
+STONEBWOY catalogue.
+</p>
+
+<div class="music-buttons">
+
+<a class="music-button"
+href="https://open.spotify.com/album/5HK6vmU6XOdUjMm3FQtqiA"
+target="_blank">
+● SPOTIFY
+</a>
+
+<a class="music-button"
+href="https://music.apple.com/us/artist/stonebwoy/572206113"
+target="_blank">
+ APPLE MUSIC
+</a>
+
+</div>
+
+</div>
 
 </article>
 
@@ -1037,67 +1712,48 @@ from different stages of the career.
 </section>
 
 
-<!-- STATS -->
+<!-- ======================================================
+     STREAMING
+====================================================== -->
 
-<section id="stats">
+<section>
 
 <div class="container">
 
-<div class="section-head">
-
 <div class="eyebrow">
-DATA ROOM
+DATA
 </div>
 
 <h2>
-Streaming Statistics
+Global Streaming
 </h2>
 
-<p>
-A dedicated place for the latest Spotify,
-YouTube, TikTok and Chartmetric figures.
+<p class="section-intro">
+A space for BHIM Natives UK to publish verified
+streaming milestones and audience statistics.
 </p>
 
-</div>
-
-
-<div class="grid grid-4">
+<div class="grid grid4" style="margin-top:35px;">
 
 <div class="stat">
 <strong>🇬🇭</strong>
-<span>Ghana audience</span>
+<span>GHANA</span>
 </div>
 
 <div class="stat">
 <strong>🇬🇧</strong>
-<span>UK audience</span>
+<span>UNITED KINGDOM</span>
 </div>
 
 <div class="stat">
 <strong>🇺🇸</strong>
-<span>USA audience</span>
+<span>UNITED STATES</span>
 </div>
 
 <div class="stat">
 <strong>🌍</strong>
-<span>Global audience</span>
+<span>WORLDWIDE</span>
 </div>
-
-</div>
-
-
-<div class="card" style="margin-top:18px">
-
-<h3>
-How we present the numbers
-</h3>
-
-<p>
-Every statistic can show the platform, measurement,
-date and source. This keeps the page useful and
-transparent while allowing us to update the numbers
-as new data arrives.
-</p>
 
 </div>
 
@@ -1106,13 +1762,13 @@ as new data arrives.
 </section>
 
 
-<!-- AWARDS -->
+<!-- ======================================================
+     AWARDS
+====================================================== -->
 
 <section id="awards">
 
 <div class="container">
-
-<div class="section-head">
 
 <div class="eyebrow">
 RECOGNITION
@@ -1122,18 +1778,16 @@ RECOGNITION
 Awards & Achievements
 </h2>
 
-<p>
-Tap Read More and the story opens directly
-on BHIM Natives UK.
+<p class="section-intro">
+Not just a list of awards — each milestone can
+be opened and explored.
 </p>
 
-</div>
+
+<div class="grid grid2" style="margin-top:35px;">
 
 
-<div class="grid grid-2">
-
-
-<article class="card">
+<article class="card award">
 
 <div class="award-year">
 2015 • BET AWARDS
@@ -1144,118 +1798,145 @@ Best International Act: Africa
 </h3>
 
 <p>
-One of the defining international breakthroughs
-of the career.
+A defining international breakthrough for
+STONEBWOY and Ghanaian music.
 </p>
 
-<button class="readmore"
-onclick="readMore(this)">
-READ MORE +
+<button class="read-more" onclick="toggleArticle(this)">
+READ THE STORY +
 </button>
 
-<div class="more">
+<div class="article-body">
 
-In 2015, STONEBWOY won the BET Award for
-Best International Act: Africa.
+<p>
+The 2015 BET Award for Best International Act:
+Africa became one of the defining moments of
+STONEBWOY's early international career.
+</p>
 
-The achievement became a major international
-milestone and helped place Ghanaian reggae and
-dancehall on an even bigger global stage.
+<p>
+The recognition placed his name in a global
+conversation and demonstrated the growing
+international visibility of Ghanaian reggae and
+dancehall.
+</p>
+
+<p>
+It was an important milestone in the journey
+from Ghanaian stages to international recognition.
+</p>
 
 </div>
 
 </article>
 
 
-<article class="card">
+<article class="card award">
 
 <div class="award-year">
-2021 • AFRIMA
+BILLBOARD • EPISTLES OF MAMA
 </div>
 
 <h3>
-African Reggae, Ragga & Dancehall
+Billboard World Albums
 </h3>
 
 <p>
-Another major continental recognition.
+A major chart milestone for Ghanaian music.
 </p>
 
-<button class="readmore"
-onclick="readMore(this)">
-READ MORE +
+<button class="read-more" onclick="toggleArticle(this)">
+READ THE STORY +
 </button>
 
-<div class="more">
-
-At the 2021 AFRIMA, STONEBWOY won Best Artiste,
-Duo or Group — African Reggae, Ragga & Dancehall.
-
-The award was part of his continuing recognition
-across African music.
-  
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="award-year">
-2024 • TELECEL GHANA MUSIC AWARDS
-</div>
-
-<h3>
-Artiste of the Year
-</h3>
+<div class="article-body">
 
 <p>
-A major home-country achievement.
+According to Apple Music's artist biography,
+<em>Epistles of Mama</em> debuted at No. 13 on
+the Billboard World Albums chart.
 </p>
 
-<button class="readmore"
-onclick="readMore(this)">
-READ MORE +
-</button>
-
-<div class="more">
-
-STONEBWOY won Artiste of the Year at the
-25th Telecel Ghana Music Awards.
-
-He also received multiple additional honours,
-making the ceremony one of the major award
-nights of the period.
+<p>
+The achievement made STONEBWOY the first Ghanaian
+artist to land on a Billboard chart, adding another
+important chapter to his international story.
+</p>
 
 </div>
 
 </article>
 
 
-<article class="card">
+<article class="card award">
 
 <div class="award-year">
-2024 • 3MUSIC AWARDS
+2023 • 5TH DIMENSION
 </div>
 
 <h3>
-Artiste of the Year
+International Album Milestones
 </h3>
 
 <p>
-Another important Ghanaian award-show victory.
+The album reached audiences across multiple
+international markets.
 </p>
 
-<button class="readmore"
-onclick="readMore(this)">
-READ MORE +
+<button class="read-more" onclick="toggleArticle(this)">
+READ THE STORY +
 </button>
 
-<div class="more">
+<div class="article-body">
 
-At the 2024 3Music Awards, STONEBWOY won
-Artiste of the Year, Best Reggae/Dancehall Act
-and Album of the Year for 5th Dimension.
+<p>
+5th Dimension expanded the musical palette of
+STONEBWOY's catalogue while maintaining the
+Afro-dancehall identity associated with his work.
+</p>
+
+<p>
+The album included collaborations with artists
+including Stormzy, Angelique Kidjo, Davido,
+Tiwa Savage, Oxlade and Shaggy.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="card award">
+
+<div class="award-year">
+CAREER
+</div>
+
+<h3>
+A Growing International Legacy
+</h3>
+
+<p>
+Awards are only one part of the wider story.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ THE STORY +
+</button>
+
+<div class="article-body">
+
+<p>
+Beyond individual trophies, STONEBWOY's achievements
+include international touring, chart appearances,
+major collaborations, festival performances and
+the development of a worldwide fan community.
+</p>
+
+<p>
+The archive will continue adding documented
+achievements as new milestones happen.
+</p>
 
 </div>
 
@@ -1269,89 +1950,137 @@ and Album of the Year for 5th Dimension.
 </section>
 
 
-<!-- GLOBAL IMPACT -->
+<!-- ======================================================
+     GLOBAL IMPACT
+====================================================== -->
 
 <section id="impact">
 
 <div class="container">
 
-<div class="section-head">
-
 <div class="eyebrow">
-BEYOND THE MUSIC
+GLOBAL IMPACT
 </div>
 
 <h2>
-Global Impact
+Beyond The Music
 </h2>
 
-<p>
-The BHIM story is not only about records.
-It is also about taking Ghanaian music
-into international spaces.
+<p class="section-intro">
+Explore the different ways STONEBWOY's career
+connects Ghana with audiences around the world.
 </p>
 
-</div>
+
+<div class="grid grid3" style="margin-top:35px;">
 
 
-<div class="grid grid-3">
-
-
-<div class="card">
-
-<div class="icon">
-🌍
-</div>
+<article class="card article-card">
 
 <h3>
-A global sound
+🌍 African Representation
 </h3>
 
+<p class="article-preview">
+Taking Ghanaian sounds into international spaces.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
 <p>
-Reggae, dancehall, Afrobeats and African
-influences create a sound that travels
-between different audiences.
+STONEBWOY's international career has helped
+demonstrate how Ghanaian artists can build
+audiences beyond their home market while
+maintaining a strong African identity.
+</p>
+
+<p>
+His music combines several African and Caribbean
+influences, creating a sound that can move between
+different audiences without losing its roots.
 </p>
 
 </div>
 
+</article>
 
-<div class="card">
 
-<div class="icon">
-🤝
-</div>
+<article class="card article-card">
 
 <h3>
-International collaboration
+🇬🇧 The UK Connection
 </h3>
 
+<p class="article-preview">
+The UK and the Ghanaian diaspora have become
+important parts of the story.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
 <p>
-Collaborations with artists from different
-countries have helped connect Ghanaian music
-with wider global audiences.
+The United Kingdom represents an important
+connection between Ghanaian music and the wider
+African diaspora.
+</p>
+
+<p>
+For STONEBWOY, UK performances have provided
+opportunities to connect directly with fans
+while bringing Ghanaian music into major
+international spaces.
+</p>
+
+<p>
+BHIM Natives UK exists to document and celebrate
+that relationship.
 </p>
 
 </div>
 
+</article>
 
-<div class="card">
 
-<div class="icon">
-🇬🇭
-</div>
+<article class="card article-card">
 
 <h3>
-Ghana on global stages
+🤝 International Collaborations
 </h3>
 
+<p class="article-preview">
+A catalogue built across borders and genres.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ MORE +
+</button>
+
+<div class="article-body">
+
 <p>
-International appearances continue to give
-Ghanaian artistry visibility beyond the country's
-borders.
+From African stars to Jamaican and international
+artists, STONEBWOY's collaborations demonstrate
+the cross-border nature of his sound.
+</p>
+
+<p>
+These collaborations have helped introduce his
+music to different audiences while creating
+new combinations of dancehall, Afrobeats,
+reggae and other sounds.
 </p>
 
 </div>
+
+</article>
 
 
 </div>
@@ -1361,140 +2090,83 @@ borders.
 </section>
 
 
-<!-- PERFORMANCES -->
+<!-- ======================================================
+     TOURS
+====================================================== -->
 
-<section id="performances">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-ON STAGE
-</div>
-
-<h2>
-Major Performances
-</h2>
-
-<p>
-Selected moments that can grow into a full
-performance archive.
-</p>
-
-</div>
-
-
-<div class="timeline">
-
-
-<div class="timeline-item">
-
-<span class="timeline-dot"></span>
-
-<h3>
-Global Citizen Festival — Accra
-</h3>
-
-<p>
-STONEBWOY was part of the 2022 Global Citizen
-Festival at Black Star Square in Accra, sharing
-a major international platform with global
-and African stars.
-</p>
-
-</div>
-
-
-<div class="timeline-item">
-
-<span class="timeline-dot"></span>
-
-<h3>
-International festival stages
-</h3>
-
-<p>
-His performance history includes international
-reggae and African music festivals across
-different countries.
-</p>
-
-</div>
-
-
-<div class="timeline-item">
-
-<span class="timeline-dot"></span>
-
-<h3>
-UK stages
-</h3>
-
-<p>
-The UK has become an important part of the
-wider BHIM story, connecting Ghanaian music
-with the diaspora and multicultural audiences.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EVENTS -->
-
-<section id="events">
+<section id="tours">
 
 <div class="container">
-
-<div class="section-head">
 
 <div class="eyebrow">
 LIVE
 </div>
 
 <h2>
-Events & Tours
+Tours & Events
 </h2>
 
-<p>
-A growing archive of concerts, festivals,
-tours and BHIM events.
+<p class="section-intro">
+Explore the stories behind major tours,
+concerts and BHIM Nation events.
 </p>
 
-</div>
 
-
-<div class="card">
+<div class="card" style="margin-top:35px;">
 
 
 <div class="event">
 
-<div class="date">
+<div class="event-date">
 
 <strong>2025</strong>
-
-<span>WORLD</span>
+<small>WORLD TOUR</small>
 
 </div>
 
 <div>
 
 <h3>
-Up & Runnin6 World Tour
+UP & RUNNIN6 World Tour
 </h3>
 
 <p>
-The tour continued the connection between
-STONEBWOY and fans across the international
-diaspora.
+The tour supported the 2024 album and included
+North American dates across the United States
+and Canada, followed by UK and European shows.
 </p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ TOUR STORY +
+</button>
+
+<div class="article-body">
+
+<p>
+The UP & RUNNIN6 touring era extended the life
+of the album beyond streaming platforms and into
+live performance.
+</p>
+
+<p>
+The North American schedule announced for 2025
+included Chicago, Columbus, Toronto, New York,
+Worcester and Silver Spring.
+</p>
+
+<p>
+A London show at O2 Shepherd's Bush Empire was
+also announced for March 8, 2025.
+</p>
+
+<p>
+The tour continued a pattern that has become
+central to STONEBWOY's career: taking a new
+project to international audiences and turning
+songs into live experiences.
+</p>
+
+</div>
 
 </div>
 
@@ -1503,50 +2175,134 @@ diaspora.
 
 <div class="event">
 
-<div class="date">
+<div class="event-date">
+
+<strong>2024</strong>
+<small>BHIM FEST</small>
+
+</div>
+
+<div>
+
+<h3>
+BHIM Festival
+</h3>
+
+<p>
+A major event connected to the BHIM Nation
+community and STONEBWOY's live identity.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ EVENT STORY +
+</button>
+
+<div class="article-body">
+
+<p>
+BHIM Festival has developed into an important
+event within STONEBWOY's calendar, creating a
+large-scale environment where fans can experience
+his music and the wider BHIM Nation culture.
+</p>
+
+<p>
+The festival represents more than a concert.
+It brings together music, community and Ghanaian
+identity in one major live experience.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-date">
+
+<strong>2026</strong>
+<small>TORCHER</small>
+
+</div>
+
+<div>
+
+<h3>
+THE TORCHER Experience
+</h3>
+
+<p>
+A new live chapter connected to the TORCHER era.
+</p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ TOUR STORY +
+</button>
+
+<div class="article-body">
+
+<p>
+The TORCHER era continued STONEBWOY's commitment
+to live performance and direct connection with
+fans.
+</p>
+
+<p>
+The wider 2026 touring and event calendar gives
+BHIM Natives UK another chapter to document as
+new performances and locations are confirmed.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-date">
 
 <strong>UK</strong>
-
-<span>LIVE</span>
-
-</div>
-
-<div>
-
-<h3>
-UK BHIM moments
-</h3>
-
-<p>
-A dedicated space for London shows, UK festivals,
-appearances and future BHIM Natives UK events.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="event">
-
-<div class="date">
-
-<strong>ADD</strong>
-
-<span>MORE</span>
+<small>HISTORY</small>
 
 </div>
 
 <div>
 
 <h3>
-Next event
+STONEBWOY × UK
 </h3>
 
 <p>
-New confirmed concerts, festivals and BHIM
-events can be added here.
+A dedicated archive for UK performances,
+fans and major British milestones.
 </p>
+
+<button class="read-more" onclick="toggleArticle(this)">
+READ UK STORY +
+</button>
+
+<div class="article-body">
+
+<p>
+The UK has become an important part of
+STONEBWOY's international story because of the
+strong connection between Ghana and the Ghanaian
+diaspora in Britain.
+</p>
+
+<p>
+BHIM Natives UK will use this section to document
+London performances, UK events, fan milestones,
+photos, videos and future announcements.
+</p>
+
+</div>
 
 </div>
 
@@ -1560,120 +2316,78 @@ events can be added here.
 </section>
 
 
-<!-- PHOTO GALLERY -->
+<!-- ======================================================
+     WATCH
+====================================================== -->
 
-<section id="gallery">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-VISUAL ARCHIVE
-</div>
-
-<h2>
-BHIM Photo Gallery
-</h2>
-
-<p>
-More photos throughout the website so the page
-feels visual, active and alive.
-</p>
-
-</div>
-
-
-<div class="gallery-feature">
-
-<img src="IMG_5093.jpeg"
-alt="STONEBWOY featured">
-
-</div>
-
-
-<div class="gallery-grid">
-
-<img src="IMG_4606.jpeg"
-alt="STONEBWOY photo">
-
-<img src="IMG_4974.jpeg"
-alt="STONEBWOY photo">
-
-<img src="IMG_5019.jpeg"
-alt="STONEBWOY photo">
-
-<img src="IMG_6443.jpeg"
-alt="STONEBWOY photo">
-
-<img src="IMG_4700.jpeg"
-alt="STONEBWOY photo">
-
-<img src="IMG_4659.jpeg"
-alt="STONEBWOY photo">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- VIDEOS -->
-
-<section id="videos">
+<section id="watch">
 
 <div class="container">
-
-<div class="section-head">
 
 <div class="eyebrow">
 WATCH
 </div>
 
 <h2>
-Videos
+The Video Archive
 </h2>
 
+<p class="section-intro">
+Watch performances, interviews and official
+content without leaving the BHIM Natives UK page.
+</p>
+
+
+<div class="grid grid2" style="margin-top:35px;">
+
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/gMINOvYsblk"
+title="STONEBWOY - Into The Future"
+allowfullscreen>
+</iframe>
+
+<div class="video-info">
+
+<h3>
+Into The Future
+</h3>
+
 <p>
-A dedicated area for performances, interviews,
-music videos and BHIM Natives UK content.
+Official STONEBWOY music video.
 </p>
 
 </div>
 
+</div>
 
-<div class="grid grid-2">
 
+<div class="video">
 
-<div class="video-box">
+<div style="
+aspect-ratio:16/9;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:30px;
+text-align:center;
+">
 
 <div>
 
-<strong>
-🎬 VIDEO SLOT 01
-</strong>
+<h3>
+🎬 ADD YOUR NEXT VIDEO
+</h3>
 
-<p>
-Your first video can be added here.
+<p style="color:#a8b0b8;margin-top:8px;">
+More performances, interviews and BHIM
+Nation videos can be added here.
+
 </p>
 
 </div>
-
-</div>
-
-
-<div class="video-box">
-
-<div>
-
-<strong>
-🎬 VIDEO SLOT 02
-</strong>
-
-<p>
-Your second video can be added here.
-</p>
 
 </div>
 
@@ -1687,117 +2401,242 @@ Your second video can be added here.
 </section>
 
 
-<!-- SOCIALS -->
+<!-- ======================================================
+     PHOTO ARCHIVE
+====================================================== -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="eyebrow">
+VISUAL ARCHIVE
+</div>
+
+<h2>
+Photo Gallery
+</h2>
+
+<p class="section-intro">
+More images can be added to build a proper
+STONEBWOY visual archive.
+</p>
+
+
+<div class="gallery">
+
+<img src="IMG_4974.jpeg" alt="STONEBWOY">
+
+<img src="IMG_4606.jpeg" alt="STONEBWOY">
+
+<img src="IMG_4700.jpeg" alt="STONEBWOY">
+
+<img src="IMG_4659.jpeg" alt="STONEBWOY">
+
+<img src="IMG_5019.jpeg" alt="STONEBWOY">
+
+<img src="IMG_6443.jpeg" alt="STONEBWOY">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     STONEBWOY SOCIALS
+====================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="eyebrow">
+OFFICIAL CHANNELS
+</div>
+
+<h2>
+Follow STONEBWOY
+</h2>
+
+<p class="section-intro">
+Connect with STONEBWOY through his official
+social and music platforms.
+</p>
+
+
+<div class="grid grid3" style="margin-top:35px;">
+
+
+<a class="social"
+href="https://www.instagram.com/stonebwoy/"
+target="_blank">
+
+<div>
+Instagram
+<small>@stonebwoy</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+
+<a class="social"
+href="https://x.com/stonebwoy"
+target="_blank">
+
+<div>
+X
+<small>@stonebwoy</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+
+<a class="social"
+href="https://www.tiktok.com/@stonebwoy"
+target="_blank">
+
+<div>
+TikTok
+<small>@stonebwoy</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+
+<a class="social"
+href="https://www.youtube.com/@Stonebwoy"
+target="_blank">
+
+<div>
+YouTube
+<small>Stonebwoy</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+
+<a class="social"
+href="https://www.facebook.com/stonebwoyburniton"
+target="_blank">
+
+<div>
+Facebook
+<small>Stonebwoy</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+
+<a class="social"
+href="https://open.spotify.com/artist/2ayt5jDUuTCpoTG7sHSvuq/"
+target="_blank">
+
+<div>
+Spotify
+<small>Stonebwoy</small>
+</div>
+
+<span>↗</span>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     BHIM NATIVES UK SOCIALS
+====================================================== -->
 
 <section id="socials">
 
 <div class="container">
 
-<div class="section-head">
-
 <div class="eyebrow">
-FOLLOW THE MOVEMENT
+OUR COMMUNITY
 </div>
 
 <h2>
-BHIM Natives UK
+Follow BHIM Natives UK
 </h2>
 
-<p>
-Follow, share and stay connected across
-every platform.
+<p class="section-intro">
+Follow our pages for STONEBWOY news, statistics,
+photos, videos, milestones and BHIM Nation updates.
 </p>
 
-</div>
 
-
-<div class="social-grid">
+<div class="grid grid4" style="margin-top:35px;">
 
 
 <a class="social"
 href="https://x.com/bhimnativesuk"
-target="_blank"
-rel="noopener">
+target="_blank">
 
 <div>
-
-𝕏
-
-<small>
-@bhimnativesuk
-</small>
-
+𝕏 X
+<small>@bhimnativesuk</small>
 </div>
 
-<span>
-↗
-</span>
+<span>↗</span>
 
 </a>
 
 
 <a class="social"
 href="https://www.instagram.com/bhimnativesuk/"
-target="_blank"
-rel="noopener">
+target="_blank">
 
 <div>
-
-◎
-
-<small>
-@bhimnativesuk
-</small>
-
+Instagram
+<small>@bhimnativesuk</small>
 </div>
 
-<span>
-↗
-</span>
+<span>↗</span>
 
 </a>
 
 
 <a class="social"
 href="https://www.tiktok.com/@bhimnativesuk"
-target="_blank"
-rel="noopener">
+target="_blank">
 
 <div>
-
-♪ 
-
-<small>
-@bhimnativesuk
-</small>
-
+TikTok
+<small>@bhimnativesuk</small>
 </div>
 
-<span>
-↗
-</span>
+<span>↗</span>
 
 </a>
 
 
 <a class="social"
 href="https://www.threads.com/@bhimnativesuk"
-target="_blank"
-rel="noopener">
+target="_blank">
 
 <div>
-
-◉
-
-<small>
-@bhimnativesuk
-</small>
-
+Threads
+<small>@bhimnativesuk</small>
 </div>
 
-<span>
-↗
-</span>
+<span>↗</span>
 
 </a>
 
@@ -1809,38 +2648,44 @@ rel="noopener">
 </section>
 
 
-<!-- FINAL CTA -->
+<!-- ======================================================
+     FINAL
+====================================================== -->
 
 <section>
 
 <div class="container">
 
-<div class="card"
-style="text-align:center;padding:50px 25px">
+<div class="card" style="text-align:center;padding:55px 25px;">
 
 <div class="eyebrow">
 BHIM NATIVES UK
 </div>
 
 <h2>
-ONE MOVEMENT. ONE FAMILY. BHIM! 🇬🇭🇬🇧💚
+READ. WATCH. LISTEN. EXPLORE.
 </h2>
 
-<p style="max-width:700px;margin:15px auto 0">
+<p class="section-intro" style="margin-left:auto;margin-right:auto;">
 
-Built by fans, for fans — documenting
-the music, milestones, moments and worldwide
-journey of STONEBWOY.
+The archive will continue growing with new stories,
+music, performances, statistics, photographs,
+videos, tours and BHIM Nation moments.
 
 </p>
 
-<div class="hero-actions">
+<div class="buttons" style="justify-content:center;">
 
-<a class="btn primary"
-href="#socials">
+<a href="#articles" class="btn green">
+READ STORIES
+</a>
 
-JOIN THE MOVEMENT
+<a href="#music" class="btn dark">
+LISTEN
+</a>
 
+<a href="#watch" class="btn dark">
+WATCH
 </a>
 
 </div>
@@ -1851,10 +2696,10 @@ JOIN THE MOVEMENT
 
 </section>
 
-</main>
 
-
-<!-- FOOTER -->
+<!-- ======================================================
+     FOOTER
+====================================================== -->
 
 <footer>
 
@@ -1862,16 +2707,18 @@ JOIN THE MOVEMENT
 
 <div class="footer-grid">
 
-
 <div>
 
 <div class="logo">
 BHIM <span>NATIVES UK</span>
 </div>
 
-<p>
-Supporting STONEBWOY.
-Connecting the BHIM Nation worldwide.
+<p class="footer-description">
+
+An independent fan/media archive celebrating
+STONEBWOY, his music, achievements, performances,
+global impact and BHIM Nation.
+
 </p>
 
 </div>
@@ -1885,21 +2732,12 @@ Explore
 
 <div class="footer-links">
 
-<a href="#story">
-Story
-</a>
-
-<a href="#music">
-Music
-</a>
-
-<a href="#awards">
-Awards
-</a>
-
-<a href="#events">
-Events
-</a>
+<a href="#story">Story</a>
+<a href="#articles">Articles</a>
+<a href="#music">Music</a>
+<a href="#awards">Awards</a>
+<a href="#tours">Tours</a>
+<a href="#watch">Watch</a>
 
 </div>
 
@@ -1909,42 +2747,33 @@ Events
 <div>
 
 <h3>
-Socials
+Community
 </h3>
 
 <div class="footer-links">
 
 <a href="https://x.com/bhimnativesuk"
-target="_blank">
-X
-</a>
+target="_blank">X</a>
 
 <a href="https://www.instagram.com/bhimnativesuk/"
-target="_blank">
-Instagram
-</a>
+target="_blank">Instagram</a>
 
 <a href="https://www.tiktok.com/@bhimnativesuk"
-target="_blank">
-TikTok
-</a>
+target="_blank">TikTok</a>
 
 <a href="https://www.threads.com/@bhimnativesuk"
-target="_blank">
-Threads
-</a>
+target="_blank">Threads</a>
 
 </div>
 
 </div>
-
 
 </div>
 
 
 <div class="copyright">
 
-© 2026 BHIM Natives UK • Fan/media hub •
+© 2026 BHIM Natives UK • Independent fan/media archive.
 Not the official STONEBWOY website.
 
 </div>
@@ -1956,47 +2785,136 @@ Not the official STONEBWOY website.
 
 <script>
 
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
 function toggleMenu(){
 
-document
-.getElementById("navlinks")
-.classList
-.toggle("show");
+  document
+  .getElementById("navlinks")
+  .classList
+  .toggle("show");
 
 }
 
+
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
 
 document
 .querySelectorAll(".navlinks a")
 .forEach(function(link){
 
-link.addEventListener("click",function(){
+  link.addEventListener("click",function(){
 
-document
-.getElementById("navlinks")
-.classList
-.remove("show");
+    document
+    .getElementById("navlinks")
+    .classList
+    .remove("show");
+
+  });
 
 });
 
-});
 
+/* =========================================================
+   READ MORE
+========================================================= */
 
-function readMore(button){
+function toggleArticle(button){
 
-const box=button.nextElementSibling;
+  const article =
+  button.nextElementSibling;
 
-box.classList.toggle("open");
+  article.classList.toggle("open");
 
-if(box.classList.contains("open")){
+  if(article.classList.contains("open")){
 
-button.textContent="READ LESS −";
+    button.textContent =
+    "READ LESS −";
 
-}else{
+  }else{
 
-button.textContent="READ MORE +";
+    button.textContent =
+    "READ MORE +";
+
+  }
 
 }
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+function searchArchive(){
+
+  const input =
+  document
+  .getElementById("searchInput")
+  .value
+  .toLowerCase()
+  .trim();
+
+  const results =
+  document
+  .getElementById("searchResults");
+
+  if(!input){
+
+    results.innerHTML="";
+    return;
+
+  }
+
+  const cards =
+  Array.from(
+    document.querySelectorAll(
+      ".article-card,.album-card,.award"
+    )
+  );
+
+  const matches =
+  cards.filter(function(card){
+
+    return card.innerText
+    .toLowerCase()
+    .includes(input);
+
+  });
+
+  if(!matches.length){
+
+    results.innerHTML =
+    '<div class="card"><p>No archive result found yet. More stories and content will be added.</p></div>';
+
+    return;
+
+  }
+
+  results.innerHTML =
+  '<div class="grid grid3">' +
+  matches.slice(0,9).map(function(card){
+
+    const title =
+    card.querySelector("h3")
+    ? card.querySelector("h3").innerText
+    : "Archive";
+
+    return `
+      <div class="card">
+        <div class="article-label">ARCHIVE RESULT</div>
+        <h3>${title}</h3>
+        <p style="margin-top:8px;">
+          Found in the BHIM Natives UK archive.
+        </p>
+      </div>
+    `;
+
+  }).join("") +
+  "</div>";
 
 }
 
