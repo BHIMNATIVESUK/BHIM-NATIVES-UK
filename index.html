@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BHIM Natives UK | STONEBWOY</title>
+
+<meta name="description" content="BHIM Natives UK — STONEBWOY news, music, streaming statistics, achievements and events.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#050505;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,5,5,.96);
+  border-bottom:1px solid #222;
+  backdrop-filter:blur(10px);
+}
+
+nav{
+  max-width:1150px;
+  margin:auto;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.green{
+  color:#00a651;
+}
+
+.navlinks{
+  display:flex;
+  gap:20px;
+}
+
+.navlinks a{
+  font-size:14px;
+  font-weight:700;
+  color:#ddd;
+  transition:.2s;
+}
+
+.navlinks a:hover{
+  color:#00a651;
+}
+
+.hero{
+  min-height:82vh;
+  display:flex;
+  align-items:center;
+  padding:90px 6%;
+  background:
+    radial-gradient(circle at 85% 25%,rgba(0,166,81,.22),transparent 30%),
+    radial-gradient(circle at 15% 80%,rgba(0,166,81,.08),transparent 30%),
+    #080808;
+}
+
+.hero-inner{
+  max-width:1150px;
+  width:100%;
+  margin:auto;
+}
+
+.tag{
+  color:#00a651;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+h1{
+  font-size:clamp(55px,10vw,110px);
+  line-height:.88;
+  margin:18px 0 25px;
+  letter-spacing:-4px;
+}
+
+.hero-text{
+  max-width:700px;
+  color:#bbb;
+  font-size:19px;
+}
+
+.buttons{
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  margin:0 8px 10px 0;
+  border:1px solid #00a651;
+  border-radius:6px;
+  font-weight:900;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.primary{
+  background:#00a651;
+  color:#000;
+}
+
+section{
+  padding:80px 6%;
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+}
+
+.title{
+  font-size:clamp(30px,5vw,45px);
+  margin-bottom:10px;
+}
+
+.intro{
+  color:#999;
+  max-width:700px;
+  margin-bottom:35px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  border:1px solid #252525;
+  border-radius:12px;
+  padding:25px;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#00a651;
+}
+
+.card-image{
+  width:100%;
+  height:190px;
+  border-radius:8px;
+  background:linear-gradient(135deg,#151515,#252525);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  color:#666;
+  font-weight:bold;
+  overflow:hidden;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#aaa;
+}
+
+.read{
+  display:inline-block;
+  margin-top:15px;
+  color:#00a651;
+  font-weight:900;
+}
+
+.stats{
+  background:#0d0d0d;
+}
+
+.stat{
+  font-size:38px;
+  color:#d4af37;
+  font-weight:900;
+  line-height:1.1;
+}
+
+.stat-label{
+  margin-top:10px;
+  color:#aaa;
+}
+
+.music-card{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.music-cover{
+  width:90px;
+  height:90px;
+  flex-shrink:0;
+  border-radius:8px;
+  background:#1b1b1b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#666;
+  font-size:12px;
+  text-align:center;
+}
+
+.social{
+  background:#080808;
+}
+
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.social-btn{
+  padding:18px;
+  border:1px solid #292929;
+  border-radius:10px;
+  text-align:center;
+  font-weight:900;
+  background:#111;
+  transition:.2s;
+}
+
+.social-btn:hover{
+  border-color:#00a651;
+  transform:translateY(-3px);
+}
+
+.about{
+  background:#0d0d0d;
+}
+
+.highlight{
+  margin-top:25px;
+  padding:22px;
+  border-left:4px solid #00a651;
+  background:#111;
+  color:#ddd;
+}
+
+footer{
+  text-align:center;
+  padding:40px 6%;
+  border-top:1px solid #222;
+  color:#888;
+}
+
+footer strong{
+  color:#fff;
+}
+
+/* Mobile */
+@media(max-width:800px){
+
+  .navlinks{
+    display:none;
+  }
+
+  nav{
+    padding:16px 5%;
+  }
+
+  .hero{
+    min-height:75vh;
+    padding:70px 6%;
+  }
+
+  h1{
+    font-size:clamp(52px,16vw,85px);
+    letter-spacing:-3px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  section{
+    padding:60px 6%;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .social-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .card-image{
+    height:210px;
+  }
+}
+
+@media(max-width:420px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .social-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stat{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">
+BHIM <span class="green">NATIVES UK</span>
+</div>
+
+<div class="navlinks">
+<a href="#news">News</a>
+<a href="#stats">Stats</a>
+<a href="#music">Music</a>
+<a href="#awards">Awards</a>
+<a href="#events">Events</a>
+<a href="#about">About</a>
+</div>
+</nav>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner">
+
+<div class="tag">GHANA TO THE WORLD 🇬🇭🌍🇬🇧</div>
+
+<h1>
+BHIM<br>
+<span class="green">NATIVES UK</span>
+</h1>
+
+<p class="hero-text">
+Your home for STONEBWOY news, music updates, streaming statistics,
+achievements, events and the global BHIM movement.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="#news">LATEST NEWS</a>
+<a class="btn" href="#stats">STREAMING STATS</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- NEWS -->
+<section id="news">
+<div class="container">
+
+<h2 class="title">
+LATEST <span class="green">NEWS</span>
+</h2>
+
+<p class="intro">
+Stay updated with the latest STONEBWOY and BHIM Nation news.
+</p>
+
+<div class="grid">
+
+<a href="#" class="card">
+<div class="card-image">
+YOUR NEWS IMAGE
+</div>
+
+<h3>Music Updates</h3>
+
+<p>
+New releases, projects and collaborations from STONEBWOY.
+</p>
+
+<span class="read">READ MORE →</span>
+</a>
+
+
+<a href="#" class="card">
+<div class="card-image">
+YOUR NEWS IMAGE
+</div>
+
+<h3>Streaming Milestones</h3>
+
+<p>
+Spotify, YouTube and Audiomack milestones and statistics.
+</p>
+
+<span class="read">READ MORE →</span>
+</a>
+
+
+<a href="#" class="card">
+<div class="card-image">
+YOUR NEWS IMAGE
+</div>
+
+<h3>Global Achievements</h3>
+
+<p>
+Major performances, awards and international achievements.
+</p>
+
+<span class="read">READ MORE →</span>
+</a>
+
+</div>
+</div>
+</section>
+
+
+<!-- STATS -->
+<section id="stats" class="stats">
+<div class="container">
+
+<h2 class="title">
+STREAMING <span class="green">STATISTICS</span>
+</h2>
+
+<p class="intro">
+Tracking STONEBWOY's streaming journey across major platforms.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="stat">44.94M+</div>
+<div class="stat-label">5TH DIMENSION — Spotify</div>
+</div>
+
+<div class="card">
+<div class="stat">14.13M+</div>
+<div class="stat-label">ANLOGA JUNCTION — Spotify</div>
+</div>
+
+<div class="card">
+<div class="stat">10.89M+</div>
+<div class="stat-label">UP &amp; Runnin6 — Spotify</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- MUSIC -->
+<section id="music">
+<div class="container">
+
+<h2 class="title">
+MUSIC <span class="green">UPDATES</span>
+</h2>
+
+<p class="intro">
+Discover STONEBWOY's music, albums and latest releases.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="music-card">
+
+<div class="music-cover">
+ALBUM<br>COVER
+</div>
+
+<div>
+<h3>5TH DIMENSION</h3>
+<p>Album • STONEBWOY</p>
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<div class="music-card">
+
+<div class="music-cover">
+ALBUM<br>COVER
+</div>
+
+<div>
+<h3>ANLOGA JUNCTION</h3>
+<p>Album • STONEBWOY</p>
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<div class="music-card">
+
+<div class="music-cover">
+ALBUM<br>COVER
+</div>
+
+<div>
+<h3>UP &amp; RUNNIN6</h3>
+<p>Album • STONEBWOY</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- AWARDS -->
+<section id="awards" class="stats">
+<div class="container">
+
+<h2 class="title">
+AWARDS &amp; <span class="green">ACHIEVEMENTS</span>
+</h2>
+
+<p class="intro">
+Celebrating STONEBWOY's biggest career milestones.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-image">AWARD IMAGE</div>
+<h3>🏆 International</h3>
+<p>Major international recognition and achievements.</p>
+</div>
+
+<div class="card">
+<div class="card-image">AWARD IMAGE</div>
+<h3>🏆 Ghana</h3>
+<p>Celebrating award-winning achievements from Ghana.</p>
+</div>
+
+<div class="card">
+<div class="card-image">ACHIEVEMENT IMAGE</div>
+<h3>🌍 Global Impact</h3>
+<p>Milestones from around the world.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- EVENTS -->
+<section id="events">
+<div class="container">
+
+<h2 class="title">
+EVENTS &amp; <span class="green">TOURS</span>
+</h2>
+
+<p class="intro">
+Headline shows, festivals and international touring.
+</p>
+
+<div class="grid">
+
+<a href="#" class="card">
+<div class="card-image">EVENT IMAGE</div>
+<h3>🇬🇧 UK</h3>
+<p>Concerts, festivals and appearances across the UK.</p>
+<span class="read">VIEW EVENT →</span>
+</a>
+
+<a href="#" class="card">
+<div class="card-image">EVENT IMAGE</div>
+<h3>🌍 International</h3>
+<p>Shows and tours from around the world.</p>
+<span class="read">VIEW EVENT →</span>
+</a>
+
+<a href="#" class="card">
+<div class="card-image">EVENT IMAGE</div>
+<h3>🎤 BHIM Events</h3>
+<p>Major BHIM Nation celebrations and events.</p>
+<span class="read">VIEW EVENT →</span>
+</a>
+
+</div>
+</div>
+</section>
+
+
+<!-- SOCIALS -->
+<section class="social">
+<div class="container">
+
+<h2 class="title">
+FOLLOW <span class="green">BHIM NATIVES UK</span>
+</h2>
+
+<p class="intro">
+Follow us for the latest STONEBWOY updates and BHIM content.
+</p>
+
+<div class="social-grid">
+
+<a class="social-btn" href="#" target="_blank">
+𝕏 X / TWITTER
+</a>
+
+<a class="social-btn" href="#" target="_blank">
+♪ TIKTOK
+</a>
+
+<a class="social-btn" href="#" target="_blank">
+▶ YOUTUBE
+</a>
+
+<a class="social-btn" href="#" target="_blank">
+◎ INSTAGRAM
+</a>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+<div class="container">
+
+<h2 class="title">
+ABOUT <span class="green">BHIM NATIVES UK</span>
+</h2>
+
+<p class="intro">
+BHIM Natives UK is a STONEBWOY fan and media platform dedicated
+to sharing his latest news, music, achievements, streaming
+statistics, events and international shows.
+</p>
+
+<div class="highlight">
+<strong class="green">
+One Movement. One Family. BHIM! 🇬🇭🇬🇧💚
+</strong>
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<strong>BHIM NATIVES UK</strong>
+
+<br>
+
+Supporting STONEBWOY. Connecting the BHIM Nation family.
+
+<br><br>
+
+© 2026 BHIM Natives UK
+
+</footer>
+
+</body>
+</html>
