@@ -1,1 +1,1449 @@
-⬇️ Download index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification" content="apesZMtGVNpMLi27eE5E-QPHaU88NjuoczVrsdsP39Y">
+
+<title>BHIM NATIVES UK | STONEBWOY</title>
+<meta name="description" content="BHIM NATIVES UK — a fan-built Stonebwoy archive celebrating the music, journey, achievements, performances and global movement.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050605;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+button{
+    font:inherit;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:22px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(to bottom,rgba(0,0,0,.8),transparent);
+}
+
+.logo{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#00d26a;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.nav-links a:hover{
+    color:#00d26a;
+}
+
+.menu{
+    display:none;
+    font-size:25px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    background:
+        linear-gradient(to top,#050605 3%,rgba(0,0,0,.3) 45%,rgba(0,0,0,.15)),
+        url("IMG_4981.jpeg") center/cover no-repeat;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.18));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1000px;
+    padding:0 7% 100px;
+}
+
+.eyebrow{
+    color:#00d26a;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(55px,11vw,145px);
+    line-height:.83;
+    font-weight:1000;
+    letter-spacing:-7px;
+    text-transform:uppercase;
+}
+
+.hero h1 span{
+    color:#00d26a;
+}
+
+.hero p{
+    max-width:650px;
+    margin-top:30px;
+    font-size:17px;
+    color:#ddd;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:13px 21px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:3px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.btn.green{
+    background:#00d26a;
+    color:#000;
+    border-color:#00d26a;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* GENERAL */
+
+section{
+    padding:110px 6%;
+}
+
+.section-label{
+    color:#00d26a;
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:clamp(38px,6vw,75px);
+    line-height:.95;
+    text-transform:uppercase;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.section-intro{
+    color:#aaa;
+    max-width:700px;
+    margin-bottom:50px;
+}
+
+/* STORY */
+
+.story-intro{
+    max-width:850px;
+}
+
+.story-intro h2{
+    font-size:clamp(40px,7vw,90px);
+    text-transform:uppercase;
+    line-height:.9;
+    letter-spacing:-4px;
+}
+
+.story-intro h2 span{
+    color:#00d26a;
+}
+
+.story-feature{
+    margin-top:60px;
+    position:relative;
+    min-height:550px;
+    overflow:hidden;
+    background:#101210;
+}
+
+.story-feature img{
+    height:550px;
+    object-fit:cover;
+    opacity:.7;
+}
+
+.story-feature-content{
+    position:absolute;
+    inset:auto 0 0 0;
+    padding:50px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+}
+
+.story-feature h3{
+    font-size:40px;
+    text-transform:uppercase;
+}
+
+/* CHAPTERS */
+
+.chapters{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2px;
+    background:#222;
+}
+
+.chapter{
+    min-height:430px;
+    position:relative;
+    overflow:hidden;
+    background:#111;
+}
+
+.chapter img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.65;
+    transition:.5s;
+}
+
+.chapter:hover img{
+    transform:scale(1.06);
+    opacity:.8;
+}
+
+.chapter::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 20%,rgba(0,0,0,.95));
+}
+
+.chapter-content{
+    position:absolute;
+    z-index:2;
+    bottom:0;
+    padding:35px;
+}
+
+.chapter-number{
+    color:#00d26a;
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.chapter h3{
+    font-size:30px;
+    line-height:1;
+    margin:12px 0;
+    text-transform:uppercase;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2px;
+}
+
+.achievement{
+    min-height:400px;
+    position:relative;
+    overflow:hidden;
+    background:#111;
+}
+
+.achievement img{
+    height:100%;
+    object-fit:cover;
+    opacity:.55;
+}
+
+.achievement-content{
+    position:absolute;
+    inset:auto 0 0;
+    padding:30px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+}
+
+.achievement strong{
+    color:#00d26a;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.achievement h3{
+    font-size:25px;
+    text-transform:uppercase;
+    margin:8px 0;
+}
+
+/* STAT BAR */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid #292929;
+    border-bottom:1px solid #292929;
+    margin-top:40px;
+}
+
+.stat{
+    padding:35px 20px;
+    border-right:1px solid #292929;
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+    display:block;
+    color:#00d26a;
+    font-size:30px;
+}
+
+.stat span{
+    color:#999;
+    font-size:12px;
+}
+
+/* LATEST */
+
+.latest{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:3px;
+}
+
+.latest-card{
+    position:relative;
+    min-height:500px;
+    overflow:hidden;
+}
+
+.latest-card img{
+    height:100%;
+    object-fit:cover;
+}
+
+.latest-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 30%,rgba(0,0,0,.95));
+}
+
+.latest-content{
+    position:absolute;
+    z-index:2;
+    bottom:0;
+    padding:40px;
+}
+
+.latest-content h3{
+    font-size:50px;
+    text-transform:uppercase;
+}
+
+/* ALBUMS */
+
+.albums{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.album{
+    background:#0e100f;
+    border:1px solid #202420;
+    padding-bottom:20px;
+}
+
+.album img{
+    aspect-ratio:1;
+    object-fit:cover;
+}
+
+.album h3{
+    padding:15px 15px 0;
+    text-transform:uppercase;
+}
+
+.album p{
+    padding:3px 15px;
+    color:#777;
+    font-size:12px;
+}
+
+/* VIDEO */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:3px;
+}
+
+.video{
+    min-height:300px;
+    display:flex;
+    align-items:flex-end;
+    padding:30px;
+    background:
+        linear-gradient(transparent,rgba(0,0,0,.95)),
+        url("IMG_4976.jpeg") center/cover;
+}
+
+.video h3{
+    font-size:25px;
+    text-transform:uppercase;
+}
+
+/* TOURS */
+
+.timeline{
+    border-left:1px solid #333;
+    margin-left:15px;
+}
+
+.timeline-item{
+    position:relative;
+    padding:0 0 60px 45px;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#00d26a;
+    left:-5px;
+    top:5px;
+}
+
+.timeline-year{
+    color:#00d26a;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.timeline h3{
+    font-size:32px;
+    text-transform:uppercase;
+}
+
+/* FESTIVAL */
+
+.festival{
+    position:relative;
+    min-height:650px;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    background:
+        linear-gradient(to top,#050505,transparent 65%),
+        url("IMG_4984.jpeg") center/cover;
+}
+
+.festival-content{
+    max-width:850px;
+    padding:60px;
+}
+
+.festival h2{
+    font-size:clamp(50px,8vw,100px);
+    line-height:.85;
+    text-transform:uppercase;
+}
+
+.festival h2 span{
+    color:#00d26a;
+}
+
+/* GALLERY */
+
+.gallery{
+    columns:4 250px;
+    column-gap:8px;
+}
+
+.gallery img{
+    margin-bottom:8px;
+    break-inside:avoid;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    opacity:.75;
+}
+
+/* SOCIAL */
+
+.socials{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:3px;
+}
+
+.social{
+    padding:35px;
+    background:#101210;
+    border:1px solid #222;
+}
+
+.social strong{
+    display:block;
+    font-size:20px;
+    text-transform:uppercase;
+}
+
+.social span{
+    color:#00d26a;
+    font-size:12px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:70px 6%;
+    border-top:1px solid #222;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+footer strong{
+    font-size:25px;
+}
+
+footer span{
+    color:#777;
+    font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-content{
+        padding:0 6% 70px;
+    }
+
+    .hero h1{
+        letter-spacing:-4px;
+    }
+
+    section{
+        padding:80px 5%;
+    }
+
+    .chapters,
+    .latest{
+        grid-template-columns:1fr;
+    }
+
+    .achievements{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .albums{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .festival-content{
+        padding:35px;
+    }
+
+    .socials{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:550px){
+
+    .hero{
+        min-height:90vh;
+        background-position:center;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .chapter{
+        min-height:380px;
+    }
+
+    .achievements{
+        grid-template-columns:1fr;
+    }
+
+    .albums{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .latest-card{
+        min-height:400px;
+    }
+
+    .latest-content h3{
+        font-size:35px;
+    }
+
+    .socials{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#" class="logo">BHIM <span>NATIVES</span> UK</a>
+
+    <div class="nav-links">
+        <a href="#story">STORY</a>
+        <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="#latest">LATEST</a>
+        <a href="#music">MUSIC</a>
+        <a href="#watch">WATCH</a>
+        <a href="#tours">TOURS</a>
+        <a href="#gallery">GALLERY</a>
+    </div>
+
+    <div class="menu">☰</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+    <div class="hero-content">
+
+        <div class="eyebrow">BHIM NATIVES UK • STONEBWOY ARCHIVE</div>
+
+        <h1>
+            BHIM TO<br>
+            <span>THE WORLD.</span>
+        </h1>
+
+        <p>
+            A fan-built archive celebrating Livingstone Etse Satekla —
+            the music, the journey, the awards, the performances and
+            the global movement behind Stonebwoy.
+        </p>
+
+        <div class="hero-buttons">
+            <a class="btn green" href="#latest">LATEST MUSIC</a>
+            <a class="btn" href="#story">EXPLORE STORY</a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- STORY -->
+
+<section id="story">
+
+    <div class="story-intro">
+        <div class="section-label">THE JOURNEY</div>
+
+        <h2>
+            FROM <span>ASHAIMAN</span><br>
+            TO THE WORLD.
+        </h2>
+
+        <p class="section-intro">
+            Explore the chapters that shaped Stonebwoy's career —
+            from his roots and early music to major awards and
+            international stages.
+        </p>
+    </div>
+
+
+    <div class="story-feature">
+
+        <img src="IMG_4606.jpeg" alt="Stonebwoy">
+
+        <div class="story-feature-content">
+
+            <div class="section-label">FEATURED STORY</div>
+
+            <h3>The voice. The journey. The legacy.</h3>
+
+            <p>
+                Livingstone Etse Satekla built a career around
+                Afro-dancehall, reggae, dancehall and Afropop while
+                keeping Ghanaian identity at the centre of his sound.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STORY CHAPTERS -->
+
+<section>
+
+<div class="chapters">
+
+    <article class="chapter">
+        <img src="IMG_4659.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 02</div>
+            <h3>How the music started</h3>
+            <p>The early influences, school years and first professional steps that led to Grade 1.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_4700.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 03</div>
+            <h3>The accident that changed his life</h3>
+            <p>A difficult chapter that became part of the resilience behind the artist.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_4972.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 04</div>
+            <h3>BET 2015: The breakthrough</h3>
+            <p>The international recognition that changed the scale of Stonebwoy's career.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_4974.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 05</div>
+            <h3>The award era</h3>
+            <p>How recognition continued to grow after the first major international breakthrough.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_4975.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 06</div>
+            <h3>VGMA: Artiste of the Year</h3>
+            <p>From the 2015 Artiste of the Year win to another historic victory.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_4986.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 07</div>
+            <h3>International achievements</h3>
+            <p>Billboard, BET and international recognition that pushed the music beyond Ghana.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_4987.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 08</div>
+            <h3>Global impact</h3>
+            <p>Why Stonebwoy's influence reaches beyond songs into culture and representation.</p>
+        </div>
+    </article>
+
+    <article class="chapter">
+        <img src="IMG_5006.jpeg" alt="Stonebwoy">
+        <div class="chapter-content">
+            <div class="chapter-number">CHAPTER 09</div>
+            <h3>Why he keeps making music</h3>
+            <p>Identity, experience, representation and the connection between Stonebwoy and his supporters.</p>
+        </div>
+    </article>
+
+</div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+    <div class="section-label">MILESTONES</div>
+
+    <h2 class="section-title">
+        INTERNATIONAL<br>ACHIEVEMENTS.
+    </h2>
+
+    <p class="section-intro">
+        A selection of milestones that helped establish Stonebwoy
+        as one of Ghana's most internationally recognised artists.
+    </p>
+
+
+    <div class="achievements">
+
+        <article class="achievement">
+            <img src="IMG_5019.jpeg" alt="Stonebwoy">
+            <div class="achievement-content">
+                <strong>BET 2015</strong>
+                <h3>Best International Act: Africa</h3>
+                <p>One of the defining international moments of Stonebwoy's career.</p>
+            </div>
+        </article>
+
+        <article class="achievement">
+            <img src="IMG_5078.jpeg" alt="Stonebwoy">
+            <div class="achievement-content">
+                <strong>BILLBOARD</strong>
+                <h3>Epistles of Mama</h3>
+                <p>The album reached No. 13 on the Billboard World Albums chart.</p>
+            </div>
+        </article>
+
+        <article class="achievement">
+            <img src="IMG_5093.jpeg" alt="Stonebwoy">
+            <div class="achievement-content">
+                <strong>5TH DIMENSION</strong>
+                <h3>Billboard Reggae Albums</h3>
+                <p>5th Dimension debuted at No. 8 on the Billboard Reggae Albums chart.</p>
+            </div>
+        </article>
+
+        <article class="achievement">
+            <img src="IMG_5323.jpeg" alt="Stonebwoy">
+            <div class="achievement-content">
+                <strong>BHIM FESTIVAL</strong>
+                <h3>Taking the festival overseas</h3>
+                <p>BHIM Festival expanded internationally to a major UK stage.</p>
+            </div>
+        </article>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>2015</strong>
+            <span>BET International Act: Africa</span>
+        </div>
+
+        <div class="stat">
+            <strong>#13</strong>
+            <span>Billboard World Albums — EOM</span>
+        </div>
+
+        <div class="stat">
+            <strong>#8</strong>
+            <span>Billboard Reggae Albums — 5th Dimension</span>
+        </div>
+
+        <div class="stat">
+            <strong>GLOBAL</strong>
+            <span>BHIM Festival & International Touring</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LATEST -->
+
+<section id="latest">
+
+    <div class="section-label">2026</div>
+
+    <h2 class="section-title">LATEST<br>MOVEMENT.</h2>
+
+    <p class="section-intro">
+        New music and recent Stonebwoy moments.
+    </p>
+
+
+    <div class="latest">
+
+        <a class="latest-card" href="https://youtu.be/zaIma2Er2yE" target="_blank">
+
+            <img src="IMG_5718.jpeg" alt="Stonebwoy Wake Up">
+
+            <div class="latest-content">
+                <div class="section-label">LATEST SINGLE • AUG 28, 2026</div>
+                <h3>WAKE UP</h3>
+                <p>Stonebwoy's latest single.</p>
+            </div>
+
+        </a>
+
+
+        <div class="latest-card">
+
+            <img src="IMG_5720.jpeg" alt="Stonebwoy">
+
+            <div class="latest-content">
+
+                <div class="section-label">ALBUM • 2026</div>
+
+                <h3>TORCHER II</h3>
+
+                <p>
+                    The latest album chapter in Stonebwoy's catalogue.
+                </p>
+
+                <br>
+
+                <a class="btn green"
+                   href="https://music.apple.com/us/artist/stonebwoy/572206113"
+                   target="_blank">
+                   LISTEN
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div style="margin-top:30px">
+
+        <div class="section-label">2026 SINGLES</div>
+
+        <h3 style="font-size:28px;text-transform:uppercase">
+            SEXY & BAD • Odo Nwom • Trouble (She Hate Men)
+        </h3>
+
+        <p style="color:#888">
+            Biribiara Bεyε Fine • Blackstars (Ozamina) • Show Me
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MUSIC -->
+
+<section id="music">
+
+    <div class="section-label">DISCOGRAPHY</div>
+
+    <h2 class="section-title">THE MUSIC.</h2>
+
+    <p class="section-intro">
+        Explore the major album chapters that built the Stonebwoy catalogue.
+    </p>
+
+
+    <div class="albums">
+
+        <div class="album">
+            <img src="IMG_5828.jpeg" alt="Grade 1">
+            <h3>Grade 1</h3>
+            <p>2012</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_6316.jpeg" alt="Necessary Evil">
+            <h3>Necessary Evil</h3>
+            <p>2014</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_6317.jpeg" alt="Epistles of Mama">
+            <h3>Epistles of Mama</h3>
+            <p>2018</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_6318.jpeg" alt="Anloga Junction">
+            <h3>Anloga Junction</h3>
+            <p>2020</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_6320.jpeg" alt="5th Dimension">
+            <h3>5th Dimension</h3>
+            <p>2023</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_6443.jpeg" alt="Up and Runnin6">
+            <h3>Up & Runnin6</h3>
+            <p>2024</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_7070.jpeg" alt="The Torcher">
+            <h3>The Torcher</h3>
+            <p>2025</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_5326.jpeg" alt="Torcher II">
+            <h3>TORCHER II</h3>
+            <p>2026</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WATCH -->
+
+<section id="watch">
+
+    <div class="section-label">WATCH</div>
+
+    <h2 class="section-title">STONEBWOY<br>ON SCREEN.</h2>
+
+    <p class="section-intro">
+        Music videos, live performances and BHIM Festival moments.
+    </p>
+
+
+    <div class="video-grid">
+
+        <a class="video"
+           href="https://youtu.be/zaIma2Er2yE"
+           target="_blank">
+            <h3>▶ WAKE UP<br><small>Official Music Video</small></h3>
+        </a>
+
+        <a class="video"
+           href="https://youtu.be/gMINOvYsblk"
+           target="_blank">
+            <h3>▶ INTO THE FUTURE<br><small>Official Music Video</small></h3>
+        </a>
+
+        <a class="video"
+           href="https://www.youtube.com/watch?v=pf7aZsUHe5Y"
+           target="_blank">
+            <h3>▶ MANODZI<br><small>Official Music Video</small></h3>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BHIM FEST LONDON -->
+
+<section>
+
+    <div class="festival">
+
+        <div class="festival-content">
+
+            <div class="section-label">
+                15 AUGUST 2026 • OVO ARENA WEMBLEY
+            </div>
+
+            <h2>
+                BHIM FEST<br>
+                <span>LONDON.</span>
+            </h2>
+
+            <p style="max-width:650px;margin-top:25px;color:#ddd">
+
+                Stonebwoy brought BHIM Festival to London for the first
+                international expansion of the festival, performing at
+                OVO Arena Wembley.
+
+            </p>
+
+            <br>
+
+            <a class="btn green"
+               href="https://www.ovoarena.co.uk/events/detail/stonebwoy"
+               target="_blank">
+               EVENT DETAILS
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BHIM FEST PHOTOS -->
+
+<section>
+
+    <div class="section-label">BHIM FEST LONDON</div>
+
+    <h2 class="section-title">THE NIGHT<br>IN PICTURES.</h2>
+
+    <div class="gallery">
+
+        <img src="IMG_4981.jpeg" alt="Stonebwoy BHIM Fest London">
+        <img src="IMG_4976.jpeg" alt="Stonebwoy BHIM Fest London">
+        <img src="IMG_4977.jpeg" alt="Stonebwoy BHIM Fest London">
+        <img src="IMG_4978.jpeg" alt="BHIM Fest London crowd">
+        <img src="IMG_4984.jpeg" alt="BHIM Fest London crowd">
+        <img src="IMG_4987.jpeg" alt="BHIM Fest London crowd">
+
+    </div>
+
+</section>
+
+
+<!-- TOURS -->
+
+<section id="tours">
+
+    <div class="section-label">LIVE</div>
+
+    <h2 class="section-title">TOURS &<br>MAJOR STAGES.</h2>
+
+    <p class="section-intro">
+        A timeline of major performances, touring eras and BHIM Festival moments.
+    </p>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <h3>BET Awards — Los Angeles</h3>
+            <p>Stonebwoy's international breakthrough reached a defining moment.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <h3>5th Dimension World Touring Era</h3>
+            <p>The 5th Dimension era expanded Stonebwoy's international live presence.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2024–2025</div>
+            <h3>Up & Runnin6 World Tour</h3>
+            <p>Stonebwoy continued taking the Up & Runnin6 era to audiences outside Ghana.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <h3>10th BHIM Festival — Accra</h3>
+            <p>Stonebwoy headlined the 10th BHIM Festival at Accra Sports Stadium.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <h3>BHIM Festival London</h3>
+            <p>BHIM Festival expanded internationally to OVO Arena Wembley.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <h3>TORCHER Era</h3>
+            <p>New music, performances and another chapter in Stonebwoy's international journey.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MERCH -->
+
+<section>
+
+    <div class="section-label">OFFICIAL MERCHANDISE</div>
+
+    <h2 class="section-title">THE<br>TORCHER.</h2>
+
+    <p class="section-intro">
+        Explore official STONEBWOY merchandise from the official store.
+    </p>
+
+
+    <div class="albums">
+
+        <div class="album">
+            <img src="IMG_5329.jpeg" alt="The Torcher Tee">
+            <h3>The Torcher Tee</h3>
+            <p>Official merchandise</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_5327.jpeg" alt="Crown Longsleeve">
+            <h3>Crown Longsleeve</h3>
+            <p>Official merchandise</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_5328.jpeg" alt="The Torcher Tee">
+            <h3>The Torcher Tee</h3>
+            <p>Official merchandise</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_5323.jpeg" alt="Flannel Overshirt">
+            <h3>Flannel Overshirt</h3>
+            <p>Official merchandise</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_5326.jpeg" alt="Stonebwoy Jacket">
+            <h3>Stonebwoy Jacket</h3>
+            <p>Official merchandise</p>
+        </div>
+
+        <div class="album">
+            <img src="IMG_5324.jpeg" alt="Flannel Overshirt">
+            <h3>Flannel Overshirt</h3>
+            <p>Official merchandise</p>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <a class="btn green"
+       href="https://www.stonebwoy.world/"
+       target="_blank">
+       SHOP OFFICIAL STORE →
+    </a>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+    <div class="section-label">VISUAL ARCHIVE</div>
+
+    <h2 class="section-title">THE<br>GALLERY.</h2>
+
+    <div class="gallery">
+
+        <img src="IMG_4606.jpeg" alt="Stonebwoy">
+        <img src="IMG_4659.jpeg" alt="Stonebwoy">
+        <img src="IMG_4700.jpeg" alt="Stonebwoy">
+        <img src="IMG_4972.jpeg" alt="Stonebwoy">
+        <img src="IMG_4974.jpeg" alt="Stonebwoy">
+        <img src="IMG_4975.jpeg" alt="Stonebwoy">
+        <img src="IMG_4986.jpeg" alt="Stonebwoy">
+        <img src="IMG_4987.jpeg" alt="Stonebwoy">
+        <img src="IMG_5006.jpeg" alt="Stonebwoy">
+        <img src="IMG_5019.jpeg" alt="Stonebwoy">
+        <img src="IMG_5078.jpeg" alt="Stonebwoy">
+        <img src="IMG_5093.jpeg" alt="Stonebwoy">
+        <img src="IMG_5718.jpeg" alt="Stonebwoy">
+        <img src="IMG_5720.jpeg" alt="Stonebwoy">
+        <img src="IMG_5828.jpeg" alt="Stonebwoy">
+        <img src="IMG_6316.jpeg" alt="Stonebwoy">
+        <img src="IMG_6317.jpeg" alt="Stonebwoy">
+        <img src="IMG_6318.jpeg" alt="Stonebwoy">
+        <img src="IMG_6320.jpeg" alt="Stonebwoy">
+        <img src="IMG_6443.jpeg" alt="Stonebwoy">
+        <img src="IMG_7070.jpeg" alt="Stonebwoy">
+
+    </div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section>
+
+    <div class="section-label">FOLLOW THE MOVEMENT</div>
+
+    <h2 class="section-title">BHIM NATIVES<br>UK.</h2>
+
+    <p class="section-intro">
+        Follow BHIM Natives UK across social media for Stonebwoy
+        updates, statistics, music and news.
+    </p>
+
+
+    <div class="socials">
+
+        <a class="social"
+           href="https://x.com/bhimnativesuk"
+           target="_blank">
+            <strong>X / Twitter</strong>
+            <span>@bhimnativesuk</span>
+        </a>
+
+        <a class="social"
+           href="https://www.instagram.com/bhimnativesuk/"
+           target="_blank">
+            <strong>Instagram</strong>
+            <span>@bhimnativesuk</span>
+        </a>
+
+        <a class="social"
+           href="https://www.tiktok.com/@bhimnativesuk"
+           target="_blank">
+            <strong>TikTok</strong>
+            <span>@bhimnativesuk</span>
+        </a>
+
+        <a class="social"
+           href="https://www.threads.com/@bhimnativesuk"
+           target="_blank">
+            <strong>Threads</strong>
+            <span>@bhimnativesuk</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- OFFICIAL STONEBWOY -->
+
+<section>
+
+    <div class="section-label">OFFICIAL</div>
+
+    <h2 class="section-title">STONEBWOY.</h2>
+
+    <div class="socials">
+
+        <a class="social"
+           href="https://www.youtube.com/@stonebwoy"
+           target="_blank">
+            <strong>YouTube</strong>
+            <span>Official Channel</span>
+        </a>
+
+        <a class="social"
+           href="https://www.instagram.com/stonebwoy/"
+           target="_blank">
+            <strong>Instagram</strong>
+            <span>@stonebwoy</span>
+        </a>
+
+        <a class="social"
+           href="https://x.com/stonebwoy"
+           target="_blank">
+            <strong>X</strong>
+            <span>@stonebwoy</span>
+        </a>
+
+        <a class="social"
+           href="https://open.spotify.com/artist/2ayt5jDUuTCpoTG7sHSvuq"
+           target="_blank">
+            <strong>Spotify</strong>
+            <span>Listen</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div>
+        <strong>BHIM <span style="color:#00d26a">NATIVES</span> UK</strong>
+        <br>
+        <span>A fan-made Stonebwoy archive.</span>
+    </div>
+
+    <div>
+        <span>
+            © 2026 BHIM NATIVES UK • Not officially affiliated with Stonebwoy
+        </span>
+    </div>
+
+</footer>
+
+
+</body>
+</html>
