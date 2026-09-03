@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080909">
 <meta name="description" content="BHIM NATIVES UK — Stonebwoy fan archive. Music, achievements, global impact, tours, videos, BHIM Festival London and latest releases.">
+<meta name="google-site-verification" content="apesZMtGVNpMLi27eE5E-QPHaU88NjuoczVrsdsP39Y">
 <title>BHIM NATIVES UK | STONEBWOY</title>
 
 <style>
@@ -244,7 +245,6 @@ img{max-width:100%;display:block}
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:grayscale(100%);
 }
 
 .feature-body{padding:28px}
@@ -264,7 +264,6 @@ img{max-width:100%;display:block}
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:grayscale(100%);
   transition:.45s;
 }
 
@@ -356,7 +355,6 @@ img{max-width:100%;display:block}
   height:100%;
   min-height:270px;
   object-fit:cover;
-  filter:grayscale(100%);
 }
 
 .achievement-body{padding:25px}
@@ -394,7 +392,6 @@ img{max-width:100%;display:block}
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:grayscale(100%);
 }
 
 .latest-main:after{
@@ -449,7 +446,6 @@ img{max-width:100%;display:block}
   aspect-ratio:1;
   object-fit:cover;
   border-radius:15px;
-  filter:grayscale(100%);
 }
 
 .album h3{
@@ -481,7 +477,6 @@ img{max-width:100%;display:block}
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:grayscale(100%);
   transition:.3s;
 }
 
@@ -516,49 +511,52 @@ img{max-width:100%;display:block}
   font-size:12px;
 }
 
-/* TOUR */
+/* COMPACT TOURS */
 
-.timeline{
-  position:relative;
-  margin-top:35px;
-}
-
-.timeline:before{
-  content:"";
-  position:absolute;
-  left:18px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#293034;
+.tour-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
 }
 
 .tour{
   position:relative;
-  padding-left:58px;
-  margin-bottom:32px;
+  background:linear-gradient(145deg,var(--card),var(--dark2));
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:23px;
+  min-height:190px;
+  transition:.2s;
+}
+
+.tour:hover{
+  border-color:rgba(39,214,92,.45);
+  transform:translateY(-2px);
 }
 
 .tour-dot{
-  position:absolute;
-  left:8px;
-  top:6px;
-  width:22px;
-  height:22px;
+  width:12px;
+  height:12px;
   border-radius:50%;
   background:var(--green);
-  box-shadow:0 0 0 7px rgba(39,214,92,.08);
+  display:inline-block;
+  margin-right:8px;
+  box-shadow:0 0 0 6px rgba(39,214,92,.08);
 }
 
 .tour-date{
   color:var(--green);
   font-size:11px;
   font-weight:1000;
+  display:flex;
+  align-items:center;
+  margin-bottom:9px;
 }
 
 .tour h3{
-  font-size:24px;
-  margin:4px 0;
+  font-size:23px;
+  line-height:1.1;
+  margin:5px 0 8px;
 }
 
 .tour p{
@@ -566,59 +564,72 @@ img{max-width:100%;display:block}
   font-size:13px;
 }
 
-/* GALLERY */
-
-.gallery{
-  columns:4 220px;
-  column-gap:14px;
-}
-
-.gallery figure{
-  break-inside:avoid;
-  margin-bottom:14px;
-  overflow:hidden;
-  border-radius:15px;
-  border:1px solid var(--border);
-  cursor:pointer;
-  background:#111;
-}
-
-.gallery img{
-  width:100%;
-  filter:grayscale(100%);
-  transition:.3s;
-}
-
-.gallery figure:hover img{
-  filter:grayscale(0%);
-  transform:scale(1.03);
+.tour .actions{
+  margin-top:15px;
 }
 
 /* FESTIVAL */
 
+.festival-wrap{
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  background:var(--card);
+}
+
+.festival-toggle{
+  width:100%;
+  border:0;
+  background:linear-gradient(145deg,var(--card),var(--dark2));
+  color:white;
+  padding:22px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  text-align:left;
+}
+
+.festival-toggle strong{
+  color:var(--green);
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+.festival-toggle span{
+  color:var(--muted);
+  font-size:11px;
+}
+
 .festival-list{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  padding:15px;
+}
+
+.festival-list.hidden{
+  display:none;
 }
 
 .festival-item{
-  background:var(--card);
+  background:#0b0f11;
   border:1px solid var(--border);
-  border-radius:14px;
-  padding:15px;
+  border-radius:12px;
+  padding:12px;
 }
 
 .festival-item strong{
   color:var(--green);
-  font-size:12px;
+  font-size:11px;
 }
 
 .festival-item span{
   display:block;
   color:var(--muted);
-  font-size:12px;
+  font-size:11px;
   margin-top:3px;
+  line-height:1.35;
 }
 
 /* MERCH */
@@ -640,12 +651,11 @@ img{max-width:100%;display:block}
   width:100%;
   height:300px;
   object-fit:cover;
-  filter:grayscale(100%);
   transition:.3s;
 }
 
 .merch-card:hover img{
-  filter:grayscale(0%);
+  transform:scale(1.03);
 }
 
 .merch-body{padding:20px}
@@ -658,6 +668,47 @@ img{max-width:100%;display:block}
 .merch-body p{
   color:var(--muted);
   font-size:12px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.gallery figure{
+  overflow:hidden;
+  border-radius:15px;
+  border:1px solid var(--border);
+  cursor:pointer;
+  background:#111;
+}
+
+.gallery figure.extra{
+  display:none;
+}
+
+.gallery.show-all figure.extra{
+  display:block;
+}
+
+.gallery img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.gallery figure:hover img{
+  transform:scale(1.03);
+}
+
+.gallery-button{
+  margin:22px auto 0;
+  display:flex;
+  width:max-content;
 }
 
 /* SOCIAL */
@@ -826,6 +877,10 @@ footer{
   .merch-grid{
     grid-template-columns:repeat(2,1fr);
   }
+
+  .tour-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
 @media(max-width:650px){
@@ -866,9 +921,25 @@ footer{
 
   .feature-img{height:300px}
 
-  .festival-list,
+  .festival-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+
   .merch-grid{
     grid-template-columns:1fr;
+  }
+
+  .tour-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:9px;
+  }
+
+  .gallery img{
+    height:220px;
   }
 }
 </style>
@@ -1167,7 +1238,7 @@ chart, creating another important international milestone.
 <span class="badge">5TH DIMENSION</span>
 <h3>Billboard Reggae Albums</h3>
 <p>
-5th Dimension debuted at No. 8 on the Billboard Reggae
+5th Dimension reached No. 8 on the Billboard Reggae
 Albums chart.
 </p>
 </div>
@@ -1539,25 +1610,28 @@ Tap any video card to open the official YouTube destination.
 </div>
 
 <p>
-A timeline of major performances, touring eras
+A compact archive of major performances, touring eras
 and BHIM Festival moments.
 </p>
 </div>
 
-<div class="timeline">
+<div class="tour-grid">
 
 <div class="tour">
-<div class="tour-dot"></div>
-<div class="tour-date">2015</div>
+<div class="tour-date">
+<span class="tour-dot"></span>2015
+</div>
 <h3>BET Awards — Los Angeles</h3>
 <p>
-Stonebwoy won Best International Act: Africa.
+Stonebwoy won Best International Act: Africa,
+marking a major international breakthrough.
 </p>
 </div>
 
 <div class="tour">
-<div class="tour-dot"></div>
-<div class="tour-date">2023</div>
+<div class="tour-date">
+<span class="tour-dot"></span>2023
+</div>
 <h3>5th Dimension World Touring Era</h3>
 <p>
 The 5th Dimension era expanded Stonebwoy's
@@ -1566,8 +1640,9 @@ international live presence.
 </div>
 
 <div class="tour">
-<div class="tour-dot"></div>
-<div class="tour-date">2024–2025</div>
+<div class="tour-date">
+<span class="tour-dot"></span>2024–2025
+</div>
 <h3>Up & Runnin6 World Tour</h3>
 <p>
 Stonebwoy continued taking the Up & Runnin6
@@ -1576,17 +1651,20 @@ era to audiences outside Ghana.
 </div>
 
 <div class="tour">
-<div class="tour-dot"></div>
-<div class="tour-date">2025</div>
+<div class="tour-date">
+<span class="tour-dot"></span>2025
+</div>
 <h3>10th BHIM Festival — Accra</h3>
 <p>
-A major chapter for the BHIM Festival brand.
+A major chapter for the BHIM Festival brand,
+celebrating the festival's 10th anniversary.
 </p>
 </div>
 
 <div class="tour">
-<div class="tour-dot"></div>
-<div class="tour-date">15 AUG 2026</div>
+<div class="tour-date">
+<span class="tour-dot"></span>15 AUG 2026
+</div>
 <h3>BHIM Festival London — OVO Arena Wembley</h3>
 <p>
 Stonebwoy brought BHIM Festival to London and
@@ -1597,15 +1675,17 @@ OVO Arena Wembley.
 <div class="actions">
 <a class="btn btn-green"
 href="https://www.ovoarena.co.uk/events/detail/stonebwoy"
-target="_blank">
+target="_blank"
+rel="noopener">
 EVENT DETAILS
 </a>
 </div>
 </div>
 
 <div class="tour">
-<div class="tour-dot"></div>
-<div class="tour-date">2026</div>
+<div class="tour-date">
+<span class="tour-dot"></span>2026
+</div>
 <h3>TORCHER Era</h3>
 <p>
 New music, new performances and another chapter
@@ -1631,20 +1711,30 @@ in Stonebwoy's continuing international journey.
 
 <p>
 A fan-compiled archive of international festival
-appearances associated with Stonebwoy. The archive
-is presented as a fan record and individual entries
-may require further verification.
+appearances associated with Stonebwoy. Individual
+entries may require further verification.
 </p>
 
 </div>
 
-<div class="festival-list">
+<div class="festival-wrap">
+
+<button class="festival-toggle" id="festivalToggle">
+<div>
+<strong>53 FESTIVAL ARCHIVE ENTRIES</strong>
+<br>
+<span>Tap to open the complete archive</span>
+</div>
+<div id="festivalArrow">＋</div>
+</button>
+
+<div class="festival-list hidden" id="festivalList">
 
 <div class="festival-item"><strong>01</strong><span>FIFA Fan Festival — Qatar</span></div>
 <div class="festival-item"><strong>02</strong><span>AFCON Fan Festival — Morocco</span></div>
-<div class="festival-item"><strong>03</strong><span>Summer Jam — Germany</span></div>
+<div class="festival-item"><strong>03</strong><span>Summer Jam — Germany (3x)</span></div>
 <div class="festival-item"><strong>04</strong><span>Beale Street Music Festival — Memphis, USA</span></div>
-<div class="festival-item"><strong>05</strong><span>All Africa Music Festival — Berlin, Germany</span></div>
+<div class="festival-item"><strong>05</strong><span>All Africa Music Festival — Berlin, Germany (2x)</span></div>
 <div class="festival-item"><strong>06</strong><span>Uppsala Reggae Festival — Sweden</span></div>
 <div class="festival-item"><strong>07</strong><span>Bayfront Reggae & World Music Festival — Duluth, USA</span></div>
 <div class="festival-item"><strong>08</strong><span>Ruhr Reggae Summer Festival — Germany</span></div>
@@ -1696,6 +1786,8 @@ may require further verification.
 
 </div>
 </div>
+
+</div>
 </section>
 
 <!-- MERCH -->
@@ -1725,9 +1817,7 @@ not sell these products.
 <div class="merch-body">
 <span class="badge">OFFICIAL MERCH</span>
 <h3>Torcher Tee</h3>
-<p>
-The Torcher graphic tee featuring Stonebwoy imagery.
-</p>
+<p>The Torcher graphic tee featuring Stonebwoy imagery.</p>
 </div>
 </article>
 
@@ -1736,9 +1826,7 @@ The Torcher graphic tee featuring Stonebwoy imagery.
 <div class="merch-body">
 <span class="badge">OFFICIAL MERCH</span>
 <h3>Crown Longsleeve</h3>
-<p>
-Longsleeve design from the official Stonebwoy collection.
-</p>
+<p>Longsleeve design from the official Stonebwoy collection.</p>
 </div>
 </article>
 
@@ -1747,9 +1835,7 @@ Longsleeve design from the official Stonebwoy collection.
 <div class="merch-body">
 <span class="badge">OFFICIAL MERCH</span>
 <h3>The Torcher Tee</h3>
-<p>
-Black oversized Stonebwoy Torcher design.
-</p>
+<p>Black oversized Stonebwoy Torcher design.</p>
 </div>
 </article>
 
@@ -1758,9 +1844,7 @@ Black oversized Stonebwoy Torcher design.
 <div class="merch-body">
 <span class="badge">OFFICIAL MERCH</span>
 <h3>Flannel Overshirt</h3>
-<p>
-Stonebwoy graphic flannel overshirt.
-</p>
+<p>Stonebwoy graphic flannel overshirt.</p>
 </div>
 </article>
 
@@ -1769,9 +1853,7 @@ Stonebwoy graphic flannel overshirt.
 <div class="merch-body">
 <span class="badge">BHIM STYLE</span>
 <h3>Stonebwoy Jacket</h3>
-<p>
-A fan archive visual from the Stonebwoy streetwear collection.
-</p>
+<p>A fan archive visual from the Stonebwoy streetwear collection.</p>
 </div>
 </article>
 
@@ -1780,9 +1862,7 @@ A fan archive visual from the Stonebwoy streetwear collection.
 <div class="merch-body">
 <span class="badge">OFFICIAL MERCH</span>
 <h3>Flannel Detail</h3>
-<p>
-Stonebwoy signature and graphic detailing.
-</p>
+<p>Stonebwoy signature and graphic detailing.</p>
 </div>
 </article>
 
@@ -1813,12 +1893,12 @@ SHOP OFFICIAL STORE
 </div>
 
 <p>
-Tap any photograph to view it larger.
+A compact visual archive. Tap any photograph to view it larger.
 </p>
 
 </div>
 
-<div class="gallery">
+<div class="gallery" id="galleryGrid">
 
 <figure onclick="openImage(this)"><img src="IMG_4606.jpeg" alt="Stonebwoy"></figure>
 <figure onclick="openImage(this)"><img src="IMG_4659.jpeg" alt="Stonebwoy"></figure>
@@ -1828,32 +1908,38 @@ Tap any photograph to view it larger.
 <figure onclick="openImage(this)"><img src="IMG_4975.jpeg" alt="Stonebwoy"></figure>
 <figure onclick="openImage(this)"><img src="IMG_4976.jpeg" alt="Stonebwoy"></figure>
 <figure onclick="openImage(this)"><img src="IMG_4977.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_4978.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_4981.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_4984.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_4986.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_4987.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5006.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5019.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5078.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5093.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5323.jpeg" alt="Stonebwoy merchandise"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5324.jpeg" alt="Stonebwoy merchandise"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5326.jpeg" alt="Stonebwoy merchandise"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5327.jpeg" alt="Stonebwoy merchandise"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5328.jpeg" alt="Stonebwoy merchandise"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5329.jpeg" alt="Stonebwoy merchandise"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5718.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5720.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_5828.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_6316.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_6317.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_6318.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_6320.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_6443.jpeg" alt="Stonebwoy"></figure>
-<figure onclick="openImage(this)"><img src="IMG_7070.jpeg" alt="Stonebwoy"></figure>
+
+<figure class="extra" onclick="openImage(this)"><img src="IMG_4978.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_4981.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_4984.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_4986.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_4987.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5006.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5019.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5078.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5093.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5323.jpeg" alt="Stonebwoy merchandise"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5324.jpeg" alt="Stonebwoy merchandise"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5326.jpeg" alt="Stonebwoy merchandise"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5327.jpeg" alt="Stonebwoy merchandise"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5328.jpeg" alt="Stonebwoy merchandise"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5329.jpeg" alt="Stonebwoy merchandise"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5718.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5720.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_5828.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_6316.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_6317.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_6318.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_6320.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_6443.jpeg" alt="Stonebwoy"></figure>
+<figure class="extra" onclick="openImage(this)"><img src="IMG_7070.jpeg" alt="Stonebwoy"></figure>
 
 </div>
+
+<button class="btn btn-green gallery-button" id="galleryButton">
+SHOW ALL 32 PHOTOS
+</button>
+
 </div>
 </section>
 
@@ -2004,21 +2090,56 @@ navLinks.classList.remove("open");
 });
 });
 
+/* FESTIVAL TOGGLE */
+
+const festivalToggle=document.getElementById("festivalToggle");
+const festivalList=document.getElementById("festivalList");
+const festivalArrow=document.getElementById("festivalArrow");
+
+festivalToggle.addEventListener("click",()=>{
+festivalList.classList.toggle("hidden");
+
+if(festivalList.classList.contains("hidden")){
+festivalArrow.textContent="＋";
+}else{
+festivalArrow.textContent="−";
+}
+});
+
+/* GALLERY TOGGLE */
+
+const galleryGrid=document.getElementById("galleryGrid");
+const galleryButton=document.getElementById("galleryButton");
+
+galleryButton.addEventListener("click",()=>{
+
+galleryGrid.classList.toggle("show-all");
+
+if(galleryGrid.classList.contains("show-all")){
+galleryButton.textContent="SHOW LESS ↑";
+}else{
+galleryButton.textContent="SHOW ALL 32 PHOTOS";
+}
+
+});
+
+/* ARTICLES */
+
 const articles={
 
 childhood:{
 kicker:"CHAPTER 01 • ROOTS",
 title:"From Ashaiman to the World",
 text:`
-<p>Livingstone Etse Satekla, known around the world as Stonebwoy, built his identity as an artist from a strong Ghanaian foundation.</p>
+<p>Livingstone Etse Satekla, known globally as Stonebwoy, has built a career that connects Ghanaian identity with reggae, dancehall, Afropop and the wider African sound. At the centre of that journey is Ashaiman, the Ghanaian community that became closely associated with his upbringing and the environment in which his artistic identity developed.</p>
 
-<p>Born in Ashaiman, his environment became an important part of the perspective that would later appear throughout his music. Rather than separating his background from his international ambitions, Stonebwoy has consistently carried that identity with him.</p>
+<p>Growing up around a strong local culture of music and community, Stonebwoy developed an understanding of how songs could speak directly to people's experiences. His story was never simply about becoming famous. It was about finding a voice and using it to represent where he came from while reaching audiences far beyond Ghana.</p>
 
-<p>His journey included difficult moments, including the serious road accident he experienced as a teenager. Instead of becoming the end of his ambitions, those experiences became part of the resilience associated with his story.</p>
+<p>His teenage years also included a serious road accident that resulted in a major knee injury. The experience became one of the difficult chapters of his life, but it did not end his ambitions. Instead, resilience became one of the qualities most often associated with his journey.</p>
 
-<p>As his career developed, Stonebwoy moved from the local music environment into professional recording and eventually established himself as one of Ghana's leading dancehall and reggae voices.</p>
+<p>As his professional career developed, Stonebwoy moved through Ghana's competitive music scene and began building a catalogue that established him as a major reggae and dancehall voice. Early projects helped create the foundation for later international recognition.</p>
 
-<p>Today, the Ashaiman connection remains an important part of his identity. Even as the stages became bigger and the audience became global, the story remained rooted in Ghana.</p>
+<p>What makes the journey particularly significant is how closely his global growth has remained connected to Ghana. From local stages and recordings to international festivals, awards and major arenas, Stonebwoy has continued carrying his identity with him. The story from Ashaiman to the world is therefore not about leaving his roots behind — it is about taking those roots everywhere.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2028,15 +2149,17 @@ musicstart:{
 kicker:"CHAPTER 02 • MUSIC",
 title:"How the Music Started",
 text:`
-<p>Stonebwoy's relationship with music began long before international awards and major arenas.</p>
+<p>Before the international awards, global tours and major headline performances, Stonebwoy's story began with a deep connection to music and performance. His early environment exposed him to Ghanaian sounds while reggae and dancehall became particularly important influences on the musical identity he would eventually develop.</p>
 
-<p>His early years included an interest in performance and songwriting, while Ghanaian popular music, reggae and dancehall became important influences.</p>
+<p>The Ghanaian music scene provided the foundation for his professional development. Like many artists building a career from the ground up, Stonebwoy had to establish himself through recordings, performances and relationships within the local industry. These early experiences helped him understand both the creative and business sides of being an artist.</p>
 
-<p>His professional career developed through the Ghanaian music environment before the release of <strong>Grade 1</strong> in 2012.</p>
+<p>His first major album chapter, <strong>Grade 1</strong>, arrived in 2012. The project represented an important step from emerging talent toward a more established professional identity. Two years later, <strong>Necessary Evil</strong> continued that progression and strengthened his presence within Ghana's reggae and dancehall space.</p>
 
-<p><strong>Necessary Evil</strong> followed in 2014 and strengthened his position within Ghana's music industry.</p>
+<p>The growth did not stop there. His catalogue expanded through projects that increasingly demonstrated his ability to blend dancehall with Afropop, reggae and Ghanaian musical influences. Each release added another layer to the sound and image associated with Stonebwoy.</p>
 
-<p>The growth continued with <strong>Epistles of Mama</strong>, which became an important international milestone and reached No. 13 on the Billboard World Albums chart.</p>
+<p>The early stage of his career is important because it explains why the later international achievements did not appear overnight. The BET recognition, Billboard chart appearances and international tours were built on years of development, experimentation and persistence.</p>
+
+<p>From the beginning, the central idea remained consistent: create music that could represent Ghana while still connecting with listeners anywhere in the world.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2046,13 +2169,17 @@ accident:{
 kicker:"CHAPTER 03 • RESILIENCE",
 title:"The Accident That Changed His Life",
 text:`
-<p>One of the most difficult chapters in Stonebwoy's story happened when he was still young. A serious road accident left him with a major knee injury and created physical challenges that could have changed the direction of his life.</p>
+<p>One of the most difficult chapters in Stonebwoy's life happened when he was still young. A serious road accident resulted in a major knee injury and created physical challenges that could have changed the direction of his future. For an aspiring artist, an experience like that could easily have become a reason to step away from performance and ambition.</p>
 
-<p>The experience became part of the resilience associated with his journey. Music increasingly became a form of expression and motivation.</p>
+<p>Instead, the experience became part of a much larger story about resilience. The physical consequences of the accident did not remove Stonebwoy's desire to pursue music. If anything, the difficulties became part of the determination that would later define his public journey.</p>
 
-<p>Stonebwoy continued developing himself and building his career despite the challenges.</p>
+<p>Music offered a way to express experiences, emotions and ambition. Rather than allowing one difficult moment to become the final chapter, Stonebwoy continued developing his abilities and working toward a professional career.</p>
 
-<p>The accident remains an important part of the story because it helps explain the determination behind the artist.</p>
+<p>That resilience became particularly important as his career grew. The music industry can be unpredictable, and success requires the ability to continue through setbacks as well as celebrate achievements. Stonebwoy's later career — from Ghanaian awards to international recognition — can be viewed against the backdrop of the challenges he had already overcome.</p>
+
+<p>The accident is therefore remembered not simply because it was a painful event, but because of what followed. It became one of the experiences that shaped the mindset behind the artist.</p>
+
+<p>Today, resilience remains an important part of the Stonebwoy story. His career demonstrates how difficult experiences can become part of an artist's identity without becoming the thing that defines the limits of their future.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2062,13 +2189,17 @@ bet2015:{
 kicker:"CHAPTER 04 • BREAKTHROUGH",
 title:"BET 2015: The Breakthrough",
 text:`
-<p>In 2015, Stonebwoy reached one of the biggest turning points of his career when he won <strong>Best International Act: Africa</strong> at the BET Awards.</p>
+<p>In 2015, Stonebwoy reached one of the biggest turning points of his career when he won <strong>Best International Act: Africa</strong> at the BET Awards. The achievement represented more than a personal award. It placed a Ghanaian reggae and dancehall artist on one of the most visible international stages in African popular music.</p>
 
-<p>The achievement placed him on one of the most visible international stages in African popular music and gave his career a major global spotlight.</p>
+<p>The recognition arrived during a period when Stonebwoy was establishing himself as one of Ghana's leading artists. Winning at BET gave the career a new level of international visibility and helped introduce his name to audiences who may not previously have been familiar with his music.</p>
 
-<p>The victory showed that a Ghanaian artist could compete for international attention while remaining strongly connected to his own sound and culture.</p>
+<p>What made the moment particularly significant was that the award did not require Stonebwoy to abandon his identity. His music remained rooted in Ghanaian culture and dancehall while his audience continued expanding across borders.</p>
 
-<p>BET 2015 remains one of the defining chapters of the Stonebwoy journey.</p>
+<p>The BET victory also became an important reference point for the years that followed. International chart appearances, collaborations, tours and festival performances would continue adding to the foundation created during this period.</p>
+
+<p>For fans, 2015 is therefore one of the clearest markers in the Stonebwoy timeline. It represents the moment when the conversation around his career became much more international.</p>
+
+<p>The significance of the achievement can still be seen in the direction of his career today. Stonebwoy has continued performing internationally and representing Ghanaian music on major stages, making the BET win an important early chapter in the global BHIM story.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2078,11 +2209,17 @@ awardera:{
 kicker:"CHAPTER 05 • RECOGNITION",
 title:"The Award Era",
 text:`
-<p>Stonebwoy's career continued growing after the BET breakthrough, with recognition in Ghana and internationally.</p>
+<p>Stonebwoy's career continued to grow after the 2015 BET breakthrough, with recognition coming from both Ghanaian and international award platforms. The awards became a reflection of a catalogue that continued expanding while his live presence became increasingly international.</p>
 
-<p>His awards reflect the strength of his recordings, performances and continued relevance across reggae, dancehall and Afropop.</p>
+<p>Within Ghana, Stonebwoy established himself as one of the leading names in reggae and dancehall. His ability to combine dancehall energy with African melodies, reggae influence and Ghanaian identity helped him maintain a distinct position in the industry.</p>
 
-<p>Albums including <strong>Epistles of Mama</strong>, <strong>Anloga Junction</strong>, <strong>5th Dimension</strong>, <strong>Up & Runnin6</strong> and <strong>THE TORCHER</strong> demonstrate an artist continuing to evolve.</p>
+<p>His catalogue also developed significantly during this period. Albums such as <strong>Epistles of Mama</strong>, <strong>Anloga Junction</strong>, <strong>5th Dimension</strong>, <strong>Up & Runnin6</strong> and <strong>THE TORCHER</strong> each represent different stages of his artistic development.</p>
+
+<p>Recognition followed the music. The BET achievement was followed by Billboard milestones and further awards in Ghana and across Africa. His 2024 Ghana Music Awards success, including another Artiste of the Year win, demonstrated that the early international breakthrough had not come at the expense of his position within Ghana.</p>
+
+<p>Another important aspect of the award era is longevity. Winning once can create a moment, but remaining relevant across multiple album cycles requires continued creativity and audience connection.</p>
+
+<p>Stonebwoy's award history therefore tells a bigger story than a list of trophies. It reflects an artist who has continued developing while maintaining the core identity that first connected him with listeners.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2092,11 +2229,17 @@ vgma:{
 kicker:"CHAPTER 06 • GHANA",
 title:"VGMA: Artiste of the Year",
 text:`
-<p>At the 2015 Ghana Music Awards, Stonebwoy won <strong>Artiste of the Year</strong> alongside recognition in the Reggae/Dancehall categories.</p>
+<p>The Ghana Music Awards have been an important part of Stonebwoy's domestic career, and his success at the awards reflects the position he has built within Ghana's music industry.</p>
 
-<p>“Baafira” featuring Sarkodie also received Reggae/Dancehall Song of the Year recognition.</p>
+<p>At the 2015 Ghana Music Awards, Stonebwoy won <strong>Artiste of the Year</strong>, alongside recognition in the Reggae/Dancehall categories. His song <strong>Baafira</strong> featuring Sarkodie also received Reggae/Dancehall Song of the Year recognition.</p>
 
-<p>Years later, Stonebwoy again won <strong>Artiste of the Year</strong> at the 2024 Ghana Music Awards, demonstrating long-term relevance within Ghana's music industry.</p>
+<p>The achievement came during the same period as his international breakthrough at the BET Awards. Having major recognition in Ghana and internationally made 2015 a defining year in his career.</p>
+
+<p>But the significance of the VGMA story goes beyond the first victory. Years later, Stonebwoy returned to the top of the Ghanaian awards landscape. In 2024, he won <strong>Artiste of the Year</strong> again, demonstrating that his influence had continued across different generations of releases and fans.</p>
+
+<p>The second Artiste of the Year win was particularly meaningful because it showed longevity. Stonebwoy was not simply an artist associated with one successful period. He had continued releasing projects, touring internationally, collaborating with artists and maintaining a strong connection with Ghanaian audiences.</p>
+
+<p>His VGMA history therefore forms an important part of the larger Stonebwoy story: international ambition combined with continued recognition at home.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2106,13 +2249,17 @@ international:{
 kicker:"CHAPTER 07 • WORLD",
 title:"International Achievements",
 text:`
-<p>Stonebwoy's international career has been built through awards, chart achievements, touring and consistent representation of Ghanaian music.</p>
+<p>Stonebwoy's international achievements have been built across several areas: awards, album charts, collaborations, touring and performances. Rather than relying on one defining moment, his international career has developed through repeated appearances and milestones.</p>
 
-<p>The 2015 BET Award for Best International Act: Africa became one of the earliest defining moments.</p>
+<p>The 2015 BET Award for <strong>Best International Act: Africa</strong> was one of the earliest major markers. It brought his name to a wider audience and demonstrated that his Ghanaian reggae and dancehall sound could compete on a major international platform.</p>
 
-<p><strong>Epistles of Mama</strong> reached No. 13 on the Billboard World Albums chart, while <strong>5th Dimension</strong> reached No. 8 on the Billboard Reggae Albums chart.</p>
+<p>His album catalogue later produced significant chart milestones. <strong>Epistles of Mama</strong> reached No. 13 on the Billboard World Albums chart, while <strong>5th Dimension</strong> reached No. 8 on the Billboard Reggae Albums chart.</p>
 
-<p>International touring has added another dimension, taking the music to audiences across multiple territories.</p>
+<p>These achievements were accompanied by international touring. The 5th Dimension era and later Up & Runnin6 touring chapters took Stonebwoy's live performances to audiences outside Ghana, strengthening his reputation as a touring artist.</p>
+
+<p>The international story continued into 2026 with the expansion of BHIM Festival to London. On 15 August 2026, Stonebwoy headlined OVO Arena Wembley, creating another major chapter in the global journey.</p>
+
+<p>What connects all these moments is representation. Stonebwoy's international achievements have allowed him to take Ghanaian and African musical influences into different markets while remaining connected to the identity that shaped his career.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2122,13 +2269,17 @@ global:{
 kicker:"CHAPTER 08 • GLOBAL IMPACT",
 title:"Global Impact",
 text:`
-<p>Stonebwoy's global impact comes from more than awards. His influence is connected to the way he presents Ghanaian music to international audiences while maintaining a strong African identity.</p>
+<p>Stonebwoy's global impact extends beyond the number of songs released or awards won. His influence is closely connected to the way he carries Ghanaian and African identity into international spaces.</p>
 
-<p>Touring has been one of the strongest parts of that impact.</p>
+<p>His music combines reggae, dancehall, Afropop and Ghanaian influences in a way that allows it to move between different audiences. That musical flexibility has helped him build listeners outside Ghana without losing the cultural foundation of his work.</p>
 
-<p>The BHIM Festival brand has added another layer by creating a platform around Stonebwoy's musical identity and Ghanaian culture.</p>
+<p>Touring has played an important role in that growth. Performing internationally allows an artist to turn digital listeners into real audiences, creating communities around live experiences. Stonebwoy has continued developing that side of his career through international touring eras and festival appearances.</p>
 
-<p>The international expansion of BHIM Festival demonstrates how the movement has grown beyond Ghana.</p>
+<p>The BHIM identity has also become larger than music alone. The movement represents a community of supporters connected through Stonebwoy's music, performances and Ghanaian identity.</p>
+
+<p>BHIM Festival adds another layer to that story. What began as a major Ghanaian festival brand expanded internationally, with the 2026 London edition bringing the experience to OVO Arena Wembley.</p>
+
+<p>The global impact story is therefore about connection. Stonebwoy's career demonstrates how an artist can remain deeply rooted in one place while building an audience across continents.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2138,13 +2289,19 @@ purpose:{
 kicker:"CHAPTER 09 • PURPOSE",
 title:"Why He Keeps Making Music",
 text:`
-<p>For Stonebwoy, music has become much bigger than releasing songs. It is a way of expressing identity, documenting experiences and communicating with people.</p>
+<p>For Stonebwoy, music has become much bigger than simply releasing songs. Across his catalogue, music has provided a way to communicate identity, experiences, ambition, relationships, struggle and celebration.</p>
 
-<p>His catalogue moves between celebration, struggle, relationships, ambition, spirituality and perseverance.</p>
+<p>His sound has continued evolving while maintaining strong connections to reggae and dancehall. That combination has allowed him to experiment without completely separating himself from the musical foundation that first introduced him to audiences.</p>
 
-<p>His international career has also allowed him to carry Ghanaian and African influences into stages around the world.</p>
+<p>Representation is another important part of the story. As his career expanded internationally, Stonebwoy increasingly became a representative of Ghanaian and African music on stages outside the continent.</p>
 
-<p>The BHIM identity has grown into a community that follows the music and celebrates the journey.</p>
+<p>That responsibility can also be seen in the way the BHIM identity has developed. Supporters are not simply listeners; many see themselves as part of a wider movement connected to the music and the journey.</p>
+
+<p>The motivation behind continuing to create therefore extends beyond chart positions. Every new album and performance creates another opportunity to tell a story, reach someone new or strengthen the connection with existing supporters.</p>
+
+<p>From the early days of building a career in Ghana to international headline performances, the central purpose remains communication. Music allows Stonebwoy to tell his story while giving listeners something of their own to connect with.</p>
+
+<p>That is why the journey continues: there is always another song, another stage and another audience to reach.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2154,15 +2311,19 @@ tours:{
 kicker:"CHAPTER 10 • LIVE",
 title:"Tours & Major Performances",
 text:`
-<p>Stonebwoy's live career has become one of the strongest parts of his international identity.</p>
+<p>Live performance has become one of the strongest parts of Stonebwoy's international identity. While recordings create the catalogue, touring turns that music into shared experiences with audiences around the world.</p>
 
-<p>The 5th Dimension and Up & Runnin6 eras expanded his international touring presence.</p>
+<p>The <strong>5th Dimension</strong> era expanded his international live presence, with performances connected to the album's global campaign. The period demonstrated how Stonebwoy could take a Ghanaian-rooted sound into different international markets.</p>
 
-<p>In 2026, BHIM Festival expanded to London with a major headline performance at <strong>OVO Arena Wembley</strong> on 15 August.</p>
+<p>The momentum continued through the <strong>Up & Runnin6 World Tour</strong> during 2024 and 2025. The touring era extended the reach of the album and allowed Stonebwoy to perform for audiences outside Ghana.</p>
 
-<p>OVO Arena described the event as the first time a Ghanaian artiste had headlined the iconic London venue.</p>
+<p>Back home, the BHIM Festival remained an important part of the live calendar. The 10th BHIM Festival in Accra represented another major chapter for the festival brand and its connection with Stonebwoy's audience.</p>
 
-<p>The London performance became another major chapter in the international Stonebwoy story.</p>
+<p>Then came a major international milestone in 2026. On <strong>15 August 2026</strong>, Stonebwoy brought BHIM Festival to <strong>OVO Arena Wembley</strong> in London. The venue described the event as the first time a Ghanaian artiste had headlined the iconic London venue.</p>
+
+<p>The London performance represented the combination of everything that came before it: Ghanaian roots, international touring, festival culture, a global fan community and years of artistic development.</p>
+
+<p>The TORCHER era now adds another chapter to that continuing live story, with new music creating new opportunities for performances around the world.</p>
 
 <div class="article-source">BHIM NATIVES UK • Fan archive article</div>
 `
@@ -2183,6 +2344,7 @@ document.getElementById("articleContent").innerHTML=article.text;
 document.getElementById("articleModal").classList.add("open");
 
 document.body.classList.add("no-scroll");
+
 }
 
 function closeArticle(){
@@ -2190,6 +2352,7 @@ function closeArticle(){
 document.getElementById("articleModal").classList.remove("open");
 
 document.body.classList.remove("no-scroll");
+
 }
 
 function openImage(figure){
@@ -2201,6 +2364,7 @@ document.getElementById("lightboxImage").src=image.src;
 document.getElementById("imageModal").classList.add("open");
 
 document.body.classList.add("no-scroll");
+
 }
 
 function closeImage(){
@@ -2208,6 +2372,7 @@ function closeImage(){
 document.getElementById("imageModal").classList.remove("open");
 
 document.body.classList.remove("no-scroll");
+
 }
 
 document.getElementById("articleModal").addEventListener("click",function(e){
