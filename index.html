@@ -1076,6 +1076,26 @@ footer{
     min-height:330px;
     height:330px;
   }
+
+  .article{
+    padding:22px;
+    font-size:14px;
+  }
+
+  .modal{
+    padding:15px 10px;
+  }
+
+  .modal-box{
+    margin:10px auto;
+    border-radius:20px;
+  }
+
+  .modal-header{
+    padding:24px 22px;
+    padding-right:70px;
+  }
+
 }
 </style>
 </head>
@@ -1547,7 +1567,7 @@ Wake Up
 
 <!-- TMBWOY CHAPTER ONE -->
 
-<div class="tmbwoy-feature">
+<div class="tmbwoy-feature" id="tmbwoy-chapter-one">
 
 <div class="tmbwoy-cover">
 <img src="IMG_5092.jpeg" alt="TMBwoy Chapter One album artwork">
@@ -1579,6 +1599,12 @@ a string of singles and collaborations.
 onclick="openArticle('tmbwoy')">
 READ FULL ARTICLE
 </button>
+
+<a class="btn btn-dark"
+href="#tmbwoy-chapter-one"
+onclick="openArticle('tmbwoy')">
+ARTICLE LINK
+</a>
 
 <a class="btn btn-dark"
 href="https://open.spotify.com/artist/2ZRHmTccKzYMDnU2oIUwVh"
@@ -1646,7 +1672,7 @@ APPLE MUSIC
 </div>
 
 <div class="tmbwoy-source">
-SOURCE: BHIM NATIVES GHANA
+SOURCE: BHIM NATIVES GHANA / RICHDUDE
 </div>
 
 </div>
@@ -2571,6 +2597,8 @@ text:`
 `
 },
 
+/* TMBWOY ARTICLE */
+
 tmbwoy:{
 kicker:"TMBWOY • CHAPTER ONE",
 title:"Afrodancehall Prodigy TMBwoy Debuts New Album “Chapter One”",
@@ -2663,12 +2691,14 @@ APPLE MUSIC
 </div>
 
 <div class="article-source">
-SOURCE: BHIM NATIVES GHANA
+SOURCE: BHIM NATIVES GHANA / RICHDUDE
 </div>
 `
 }
 
 };
+
+/* OPEN ARTICLE */
 
 function openArticle(id){
 
@@ -2684,7 +2714,23 @@ document.getElementById("articleModal").classList.add("open");
 
 document.body.classList.add("no-scroll");
 
+/* Create a shareable TMBwoy article URL */
+
+if(id==="tmbwoy"){
+
+history.replaceState(
+null,
+"",
+window.location.pathname+
+window.location.search+
+"#tmbwoy-chapter-one"
+);
+
 }
+
+}
+
+/* CLOSE ARTICLE */
 
 function closeArticle(){
 
@@ -2692,7 +2738,22 @@ document.getElementById("articleModal").classList.remove("open");
 
 document.body.classList.remove("no-scroll");
 
+/* Remove TMBwoy article hash when closing */
+
+if(window.location.hash==="#tmbwoy-chapter-one"){
+
+history.replaceState(
+null,
+"",
+window.location.pathname+
+window.location.search
+);
+
 }
+
+}
+
+/* OPEN IMAGE */
 
 function openImage(figure){
 
@@ -2706,6 +2767,8 @@ document.body.classList.add("no-scroll");
 
 }
 
+/* CLOSE IMAGE */
+
 function closeImage(){
 
 document.getElementById("imageModal").classList.remove("open");
@@ -2713,6 +2776,8 @@ document.getElementById("imageModal").classList.remove("open");
 document.body.classList.remove("no-scroll");
 
 }
+
+/* ARTICLE MODAL CLICK OUTSIDE */
 
 document.getElementById("articleModal").addEventListener("click",function(e){
 
@@ -2722,6 +2787,8 @@ closeArticle();
 
 });
 
+/* IMAGE MODAL CLICK OUTSIDE */
+
 document.getElementById("imageModal").addEventListener("click",function(e){
 
 if(e.target===this){
@@ -2729,6 +2796,8 @@ closeImage();
 }
 
 });
+
+/* ESCAPE KEY */
 
 document.addEventListener("keydown",function(e){
 
@@ -2738,6 +2807,22 @@ closeImage();
 }
 
 });
+
+/* DIRECT TMBWOY ARTICLE LINK */
+
+function openArticleFromHash(){
+
+if(window.location.hash==="#tmbwoy-chapter-one"){
+
+openArticle("tmbwoy");
+
+}
+
+}
+
+window.addEventListener("load",openArticleFromHash);
+
+window.addEventListener("hashchange",openArticleFromHash);
 
 </script>
 
